@@ -8,7 +8,7 @@
 * Michał Ciupak
 
 ## 2. Treść Zadania
-Zadaniem jest implementacja sklepu internetowego z możliwościami: symulacji zakupu towaru przez użytkownika, dadowaniem towaru przez użytkownika, stworzenie wygodnego API dla pobierania, filtracji danych z bazy danych, stworzenie interfejsu użytkownika w postaci strony www i nie tylko.
+Zadaniem jest implementacja sklepu internetowego z możliwościami: symulacji zakupu towaru przez użytkownika, dodawaniem towaru przez użytkownika, stworzenie wygodnego API dla pobierania, filtracji danych z bazy danych, stworzenie interfejsu użytkownika w postaci strony www i nie tylko.
 
 ## 3. Preferowane technologie
 * HTML5
