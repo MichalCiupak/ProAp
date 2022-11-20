@@ -1,0 +1,15 @@
+body{
+    background-image: linear-gradient(rgb(18, 160, 212), rgb(204, 41, 158));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#formula{
+    width: 25%;
+    background-color: white;
+    margin: 10% auto;
+    padding: 50px 20px;
+    text-align: center;
+
+
+}
