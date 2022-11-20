@@ -1,15 +1,60 @@
 body{
-    background-image: linear-gradient(rgb(18, 160, 212), rgb(204, 41, 158));
+    background: rgb(128, 221, 255);
+    background: linear-gradient(162deg, rgba(128, 221, 255, 1) 0%,
+    rgba(83, 174, 236, 1) 32%, rgba(125, 123, 236, 1) 66%,
+    rgba(221, 6, 236, 1) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-#formula{
+a:visited {
+    color: rgb(63, 63, 63);
+    text-decoration: none
+}
+
+a:link {
+    color: rgb(63, 63, 63);
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    color: hotpink;
+}
+#login-form{
+    font-size: large;
     width: 25%;
     background-color: white;
     margin: 10% auto;
     padding: 50px 20px;
     text-align: center;
+    border: 2px solid rgba(28, 110, 164, 0.1);
+    border-radius: 7px;
+    -webkit-box-shadow: 9px 8px 26px -7px rgba(0, 0, 0, 0.73);
+    -moz-box-shadow: 9px 8px 26px -7px rgba(0, 0, 0, 0.73);
+    box-shadow: 9px 8px 26px -7px rgba(0, 0, 0, 0.73);
 
 
+}
+
+.login_input{
+    border: 2px inset rgba(20, 55, 78, 0.18);
+    margin: 4px;
+    width: 70%;
+}
+
+#submit_button{
+    width: 50%;
+    border: none;
+    height: 40px;
+    font-size: 20px;
+    background: rgb(128, 221, 255);
+    border-radius: 4px;
+    background: linear-gradient(162deg, rgba(128, 221, 255, 1) 0%, rgba(221, 6, 236, 1) 100%);
+}
+
+#submit_button:hover{
+    cursor: pointer;
+    background: rgb(105, 181, 209);
+    background: linear-gradient(162deg, rgba(105, 181, 209, 1) 0%, rgba(128, 3, 136, 1) 100%);
 }
