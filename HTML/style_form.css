@@ -1,7 +1,7 @@
 body{
     background: rgb(128, 221, 255);
     background: linear-gradient(162deg, rgba(128, 221, 255, 1) 0%,
-    rgba(83, 174, 236, 1) 32%, rgba(125, 123, 236, 1) 66%,
+    rgb(71, 148, 200) 32%, rgba(125, 123, 236, 1) 66%,
     rgba(221, 6, 236, 1) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -20,6 +20,7 @@ a:link {
 a:hover {
     color: hotpink;
 }
+#error_container,
 #login-form{
     font-size: large;
     width: 25%;
@@ -53,20 +54,32 @@ a:hover {
 
 
 #submit_button{
+    font-weight:bolder;
     width: 50%;
+    color: rgb(255, 255, 255);
     border: none;
     height: 40px;
     font-size: 20px;
-    background: rgb(128, 221, 255);
+    background: rgb(108, 185, 214);
     border-radius: 4px;
     -webkit-box-shadow: inset 0px -2px 14px -2px rgba(0, 0, 0, 0.58);
     -moz-box-shadow: inset 0px -2px 14px -2px rgba(0, 0, 0, 0.58);
-    box-shadow: inset 0px -2px 14px -2px rgba(0, 0, 0, 0.58);
-    background: linear-gradient(162deg, rgba(128, 221, 255, 1) 0%, rgba(221, 6, 236, 1) 100%);
+    box-shadow: inset 0px -2px 14px -2px rgba(57, 57, 57, 0.58);
+    background: linear-gradient(162deg, rgb(105, 180, 207) 0%, rgba(221, 6, 236, 1) 100%);
 }
 
 #submit_button:hover{
     cursor: pointer;
-    background: rgb(105, 181, 209);
-    background: linear-gradient(162deg, rgba(105, 181, 209, 1) 0%, rgba(128, 3, 136, 1) 100%);
+    background: rgb(84, 145, 168);
+    background: linear-gradient(162deg, rgb(84, 144, 165) 0%, rgb(128, 3, 136) 100%);
+}
+
+.number_404{
+    font-weight: 900;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 110px;
+    background: #800388;
+    background: linear-gradient(to bottom right, #800388 0%, #5d9fb8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
