@@ -20,6 +20,7 @@ a:link {
 a:hover {
     color: hotpink;
 }
+
 #error_container,
 #login-form{
     font-size: large;
@@ -33,8 +34,6 @@ a:hover {
     -webkit-box-shadow: 9px 8px 26px -7px rgba(0, 0, 0, 0.73);
     -moz-box-shadow: 9px 8px 26px -7px rgba(0, 0, 0, 0.73);
     box-shadow: 9px 8px 26px -7px rgba(0, 0, 0, 0.73);
-
-
 }
 
 .login_input{
