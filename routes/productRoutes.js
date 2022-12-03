@@ -14,12 +14,12 @@ const router = express.Router();
 // router.route("/:productID").get(displaySingleProductPage);
 // router.route("/").get(displayMainPage);
 router
-  .route("/api/")
+  .route("/")
   .get(getAllProducts)
   .post(authenticateMiddleware, createProduct);
 
 router
-  .route("/api/:productID")
+  .route("/:productID")
   .get(getSingleProduct)
   .delete(deleteProduct)
   .patch(updateProduct);

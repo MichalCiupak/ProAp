@@ -45,9 +45,9 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/", displayRouter);
 app.use(express.json());
-app.use("/products", productRouter);
-app.use("/auth", authRouter);
-app.use("/profile", authenticateUser, profileRouter);
+app.use("/api/products", productRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/profile", authenticateUser, profileRouter);
 // app.get("/login", function (req, res) {
 //   res.sendFile(path.join(__dirname, "./public/HTML/login.html"));
 // });
