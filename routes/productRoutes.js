@@ -6,13 +6,13 @@ const {
   createProduct,
   deleteProduct,
   updateProduct,
-  displaySingleProductPage,
-  displayMainPage,
-} = require("../controlers/productController");
+  // displaySingleProductPage,
+  // displayMainPage,
+} = require("../controllers/productController");
 const router = express.Router();
 
-router.route("/:productID").get(displaySingleProductPage);
-router.route("/").get(displayMainPage);
+// router.route("/:productID").get(displaySingleProductPage);
+// router.route("/").get(displayMainPage);
 router
   .route("/api/")
   .get(getAllProducts)

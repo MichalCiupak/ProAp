@@ -1,6 +1,5 @@
 // TODO
 // 1. specific errors for file
-// 2. add sendFile to displaySingleProductPage
 const { StatusCodes } = require("http-status-codes");
 const path = require("path");
 const Product = require("../models/Product");
@@ -63,15 +62,6 @@ const getSingleProduct = async (req, res) => {
   }
 };
 
-const displaySingleProductPage = async (req, res) => {
-  res.status(StatusCodes.OK).sendFile("");
-};
-
-const displayMainPage = async (req, res) => {
-  console.log(111111);
-  res.status(200).sendFile(path.join(__dirname, "../public/index.html"));
-};
-
 const createProduct = async (req, res) => {
   if (typeof req.body?.price === "string") {
     req.body.price = Number(req.body.price);
@@ -117,6 +107,6 @@ module.exports = {
   createProduct,
   deleteProduct,
   updateProduct,
-  displaySingleProductPage,
-  displayMainPage,
+  // displaySingleProductPage,
+  // displayMainPage,
 };
