@@ -1,0 +1,203 @@
+body{
+    min-width: 700px;
+    background: rgb(128, 221, 255);
+    background: linear-gradient(162deg, rgba(128, 221, 255, 1) 0%,
+    rgba(83, 174, 236, 1) 32%, rgba(125, 123, 236, 1) 66%,
+    rgba(221, 6, 236, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#cdprof{
+    color: #66FCF1;
+    font-size: 30px;
+    box-sizing: border-box;
+    width:30px;
+}
+#bag{
+    color: #66FCF1;
+    font-size: 30px;
+    margin-left: 0px;
+    padding:0;
+    box-sizing: border-box;
+    width:30px;
+}
+#info{
+    color: #66FCF1;
+    font-size: 30px;
+    box-sizing: border-box;
+    width:30px;
+}
+.sidebarmenu
+{
+    position: relative;
+    margin-top: 10px;
+    padding-left: 0px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin:0px;
+    padding:2px;
+    height:100%;
+    /* width:20%; */
+    background-color:  #031831;
+    transition: all 3s ease;
+}
+.baritem
+{
+    color:green;
+    text-decoration: none;
+    /* font-weight: 500; */
+}
+/* a{
+    color:green;
+} */
+.baritem:hover
+{
+    font-weight: bold;
+    color:white;
+}
+ul{
+    margin-top: 0px;
+    padding:0px;
+    line-height: 320%;
+    list-style-type: none;
+    text-indent: 6%;
+}
+ul li{
+    /* width:100%; */
+    padding-top: 0;
+    border:solid 1.2px;
+    border-color:#45A29E;
+}
+ul li:hover {
+    background-color: rgb(2, 2, 45);
+}
+/* #menu:hover {
+    background-color: red;
+} */
+
+.infobox{
+    /* position: relative; */
+    /* height: 100%;
+    background:red; */
+    text-align: center;
+}
+.big-icon
+{
+    background-image: linear-gradient(162deg, rgba(128, 221, 255, 1) 0%,
+    rgba(83, 174, 236, 1) 32%, rgba(125, 123, 236, 1) 66%,
+    rgba(221, 6, 236, 1) 100%); 
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    /* font-size: 32px; */
+}
+
+#userfield{
+    position: relative;
+    font-size: large;
+    width: 60%;
+    height:70vh;
+    background-color: #fefed4;
+    margin: 130px auto;
+    display:grid;
+    grid-template-columns: 20vw auto;
+    gap:1%;
+    /* display: inline-block; */
+    /* padding: 40px 40px; 
+    padding-left: 50px; */
+    /* text-align: center; */
+    /* border: 2px solid rgba(28, 110, 164, 0.1); */
+    border-radius: 7px;
+    -webkit-box-shadow: 9px 8px 26px -7px rgba(0, 0, 0, 0.73);
+    -moz-box-shadow: 9px 8px 26px -7px rgba(0, 0, 0, 0.73);
+    box-shadow: 9px 8px 26px -7px rgba(0, 0, 0, 0.73);
+    /* border:5px solid; */
+}
+.information
+{
+    border:none;
+    background-color: transparent;
+    resize: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+.information:focus {
+    outline: 0;
+}
+#settings-icon{
+    position:absolute;
+    background-image: linear-gradient(162deg, rgba(128, 221, 255, 1) 0%,
+    rgba(83, 174, 236, 1) 32%, rgba(125, 123, 236, 1) 66%,
+    rgba(221, 6, 236, 1) 100%); 
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    font-size: 100px;
+    left:40%;
+}
+.surnamesettings{
+    position: absolute;
+    top:50%;
+    border: 2px inset rgba(20, 55, 78, 0.18);
+    background-color: #fdfff5;
+    padding: 2px;
+    height: 30%;
+    width: 42%;
+    left:55%;
+    outline: none;
+    text-align: left;
+}
+
+.namesettings{
+    position: absolute;
+    top:50%;
+    border: 2px inset rgba(20, 55, 78, 0.18);
+    background-color: #fdfff5;
+    padding: 2px;
+    height: 30%;
+    width: 42%;
+    left:0%;
+    outline: none;
+    text-align: left;
+
+}
+.snr{
+    position: absolute; 
+    /* border:1px solid; */
+    margin:0px;
+    top:20%;
+    left:55%;
+    font-size: 18px;   
+
+}
+.imx{
+
+    position: absolute; 
+    /* border:1px solid; */
+    margin:0px;
+    top:20%;
+    left:2px;
+    font-size: 18px;
+}
+.wrap{
+    /* display:flex; */
+    position:relative;
+    height:100px;
+    margin: 0px;
+    /* margin-left:-2%;
+    margin-right:-2% */
+}
+.icon_container{
+    position:relative;
+    height:100px;
+    /* background: rgb(128, 221, 255);
+    background: linear-gradient(162deg, rgba(128, 221, 255, 1) 0%,
+    rgba(83, 174, 236, 1) 32%, rgba(125, 123, 236, 1) 66%,
+    rgba(221, 6, 236, 1) 100%); */
+}
