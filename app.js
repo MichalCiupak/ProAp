@@ -19,6 +19,7 @@ const displayRouter = require("./routes/displayPageRoutes");
 const productRouter = require("./routes/productRoutes");
 const authRouter = require("./routes/authRoutes");
 const profileRouter = require("./routes/profileRoutes");
+const emailRouter = require("./routes/emailRouter");
 //middlewares
 app.use(fileUpload({ useTempFiles: true }));
 const notFoundMiddleware = require("./middleware/notFound");
@@ -48,6 +49,7 @@ app.use(express.json());
 app.use("/api/products", productRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/profile", authenticateUser, profileRouter);
+app.use("/api/confirmation", emailRouter);
 // app.get("/login", function (req, res) {
 //   res.sendFile(path.join(__dirname, "./public/HTML/login.html"));
 // });
