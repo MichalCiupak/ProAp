@@ -10,9 +10,9 @@ const displayRegisterPage = (req, res) => {
     .status(StatusCodes.OK)
     .sendFile(path.join(__dirname, "../public/HTML/registration.html"));
 };
-// const displaySingleProductPage = async (req, res) => {
-//   res.status(StatusCodes.OK).sendFile(path.join(__dirname, "../public/HTML/"));
-// };
+const displaySingleProductPage = async (req, res) => {
+  res.status(StatusCodes.OK).sendFile(path.join(__dirname, "../public/HTML/"));
+};
 
 const displayMainPage = async (req, res) => {
   return res
@@ -25,10 +25,9 @@ const displayMailConfirmationPage = async (req, res) => {
     .status(200)
     .sendFile(path.join(__dirname, "../public/HTML/emailConfirmation.html"));
 };
-
 module.exports = {
   displayLoginPage,
-  // displaySingleProductPage,
+  displaySingleProductPage,
   displayMainPage,
   displayRegisterPage,
   displayMailConfirmationPage,

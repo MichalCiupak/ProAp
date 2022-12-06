@@ -1,7 +1,7 @@
 //TODO
 // 1. DIFFERENT types of errors w zależności od tego czy
 // token jest, czy on nie działa, czy on nieaktualnyitp
-
+// 2. If user email_validated = false -> throw error
 const User = require("../models/User");
 const { createJWT, isTokenValid } = require("../utils/jwt");
 const { StatusCodes } = require("http-status-codes");

@@ -11,7 +11,7 @@ const confirmEmailAndCreateUser = async (req, res) => {
   // Only needed if you don't have a real mail account for testing
   try {
     let testAccount = await nodemailer.createTestAccount();
-
+    console.log(testAccount);
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
       host: "smtp.ethereal.email",
@@ -26,7 +26,7 @@ const confirmEmailAndCreateUser = async (req, res) => {
     // send mail with defined transport object
     let info = await transporter.sendMail({
       from: '"Fred Foo 👻" <foo@example.com>', // sender address
-      to: "123denys8@gmail.com", // list of receivers
+      to: "frb82070@cdfaq.com", // list of receivers
       subject: "Hello ✔", // Subject line
       text: "Hello world?", // plain text body
       html: "<b>Hello world?</b>", // html body
