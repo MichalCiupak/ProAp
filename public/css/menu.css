@@ -99,7 +99,7 @@ ul li:hover {
     position: relative;
     font-size: large;
     width: 60%;
-    height:70vh;
+    min-height:70vh;
     background-color: #fefed4;
     margin: 130px auto;
     display:grid;
