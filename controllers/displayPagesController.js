@@ -11,7 +11,9 @@ const displayRegisterPage = (req, res) => {
     .sendFile(path.join(__dirname, "../public/HTML/registration.html"));
 };
 const displaySingleProductPage = async (req, res) => {
-  res.status(StatusCodes.OK).sendFile(path.join(__dirname, "../public/HTML/"));
+  res
+    .status(StatusCodes.OK)
+    .sendFile(path.join(__dirname, "../public/HTML/singleProduct.html"));
 };
 
 const displayMainPage = async (req, res) => {
