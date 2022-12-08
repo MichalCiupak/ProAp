@@ -11,13 +11,15 @@ const displayRegisterPage = (req, res) => {
     .sendFile(path.join(__dirname, "../public/HTML/registration.html"));
 };
 const displaySingleProductPage = async (req, res) => {
-  res.status(StatusCodes.OK).sendFile(path.join(__dirname, "../public/HTML/"));
+  res
+    .status(StatusCodes.OK)
+    .sendFile(path.join(__dirname, "../public/HTML/singleProduct.html"));
 };
 
 const displayMainPage = async (req, res) => {
   return res
     .status(200)
-    .sendFile(path.join(__dirname, "../public/HTML/index.html"));
+    .sendFile(path.join(__dirname, "../public/HTML/temp-index.html"));
 };
 
 const displayMailConfirmationPage = async (req, res) => {

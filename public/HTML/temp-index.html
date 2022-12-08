@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../css/switch.css" type="text/css" />
+    <link rel="stylesheet" href="../css/fontello.css" type="text/css" />
+    <title>Hee Hee</title>
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <header>
+      <img style="padding-top: 20px" src="../images/logo2.png" alt="a" />
+    </header>
+    <div class="navigation_bar">
+      <div class="logo"><img src="../images/hee.png" alt="a" /></div>
+      <div class="browser">
+        <form action="order.php" method="post">
+          <input
+            class="browser_input"
+            type="search"
+            name="phrase"
+            placeholder="What do you want ot find?"
+          />
+          <button class="browser_button" type="button">
+            <i class="icon-search"></i>
+          </button>
+        </form>
+      </div>
+      <div class="login_button">
+        <a href="/login">
+          <button class="btn" type="sumbit" name="button">Log in</button>
+        </a>
+      </div>
+      <div class="settings_menu">
+        <div id="dark_theme">
+          dark
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+    </div>
+    <!-- <div class="navbar">
+      <div class="nav-logo"><img src="../images/hee.png" alt="a" /></div>
+      <div class="nav-search">
+        <form action="order.php" method="post">
+          <input
+            type="search"
+            name="phrase"
+            placeholder="What do you want ot find?"
+          />
+          <button type="button">
+            <i class="icon-search"></i>
+          </button>
+        </form>
+      </div>
+      <div class="nav-login-btn">
+        <a href="/login">
+          <button class="btn" type="sumbit" name="button">Log in</button>
+        </a>
+      </div>
+      <div class="nav-dark-theme-toggle">
+        <p>dark theme toggle</p>
+
+      </div>
+    </div> -->
+    <div class="category_menu">
+      <div class="category_type" style="margin-left: 20%" data-category="All">
+        All
+      </div>
+      <div class="category_type" style="margin-left: 20%" data-category="Books">
+        Books
+      </div>
+      <div class="category_type" data-category="Toys">Toys</div>
+      <div class="category_type" data-category="Electronics And Computers">
+        Electronics And Computers
+      </div>
+      <div class="category_type" data-category="Sports And Outdoors">
+        Sports And Outdoors
+      </div>
+      <div style="clear: both"></div>
+    </div>
+    <div
+      style="
+        min-height: 745px;
+        background: rgb(128, 221, 255);
+        background: linear-gradient(
+          162deg,
+          rgba(128, 221, 255, 1) 0%,
+          rgba(83, 174, 236, 1) 32%,
+          rgba(125, 123, 236, 1) 66%,
+          rgba(221, 6, 236, 1) 100%
+        );
+      "
+      class="main-container"
+    ></div>
+    <footer class="footer">
+      Copyright &copy; PAP-Shop, Inc. All rights reserved
+    </footer>
+  </body>
+
+  <!-- scripts -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <script src="../js/main.js"></script>
+</html>
