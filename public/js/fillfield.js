@@ -4,15 +4,20 @@ var address = document.getElementById("adres");
 var email = document.getElementById("email");
 var login = document.getElementById("login");
 
-window.addEventListener("load", ()=>
+window.addEventListener("load", async (e)=>
 {
-    const token = localStorage.getItem("token");
-    data = JSON.parse(token);
-    namex.innerHTML = data["name"];
-    surname.innerHTML = data["surname"];
-    address.innerHTML = data["address"];
-    email.innerHTML = data["email"];
-    login.innerHTML = data["login"];
+    let data = await axios.get("/api/profile",
+    {
+        headers: {
+            authorization: localStorage.getItem("token")
+        },
+    });
+    const UserData = data.data.user;
+    namex.innerHTML = UserData.name;
+    surname.innerHTML = UserData.surname;
+    address.innerHTML = UserData.address;
+    email.innerHTML = UserData.email;
+    login.innerHTML = UserData.login;
 
 
 })
