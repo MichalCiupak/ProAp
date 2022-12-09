@@ -11,6 +11,8 @@ var dict = {};
 var submitButton = document.getElementsByClassName("submit_button");
 var check_dict = {}
 submitButton[0].classList.add("gray_color");
+submitButton[0].disabled = true;
+submitButton[0].classList.remove("sbtx");
 function show_green_check(dom_green,dom_red)
 {
     dom_green.style.opacity = 1;
