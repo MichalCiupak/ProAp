@@ -8,8 +8,9 @@ var pinfo1  = document.getElementById("pinfo1");
 var pinfo2 = document.getElementById("pinfo2");
 var pinfo3 = document.getElementById("pinfo3");
 var dict = {};
-var submitButton = document.getElementById("submit_button");
+var submitButton = document.getElementsByClassName("submit_button");
 var check_dict = {}
+submitButton[0].classList.add("gray_color");
 function show_green_check(dom_green,dom_red)
 {
     dom_green.style.opacity = 1;
@@ -27,11 +28,20 @@ function check_enabling()
 {
 if(Object.values(check_dict).filter(x=>x==true).length === 6)
 {
-    submitButton.disabled = false;
+    submitButton[0].classList.remove("gray_color");
+    submitButton[0].classList.add("sbtx");
+    submitButton[0].classList.add("bgcolor");
+    console.log(submitButton);
+    submitButton[0].disabled = false;
 }
 else
 {
-    submitButton.disabled = true    ;
+    submitButton[0].classList.add("gray_color");
+    submitButton[0].classList.remove("sbtx");
+    submitButton[0].classList.remove("sbtx");
+    submitButton[0].classList.remove("bgcolor");
+    // console.log(submitButton[0].style.backgroundColor);
+    submitButton[0].disabled = true    ;
 }
 }
 pass.addEventListener('input', ()=>

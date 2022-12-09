@@ -10,7 +10,7 @@ body{
 
 a:visited {
     color: rgb(63, 63, 63);
-    text-decoration: none;
+    text-decoration: none
 }
 
 a:link {
@@ -24,9 +24,9 @@ a:hover {
 #error_container,
 #login-form{
     font-size: large;
-    width: 350px;
+    width: 70%;
     background-color: #fefed4;
-    margin: 130px auto;
+    margin: 100px auto;
     padding: 40px 20px;
     text-align: center;
     border: 2px solid rgba(28, 110, 164, 0.1);
@@ -48,6 +48,7 @@ a:hover {
     text-align: center;
 }
 
+
 .login_input:focus {
     padding: 0 2px;
     border: 4px inset rgba(20, 55, 78, 0.18);
@@ -58,8 +59,8 @@ a:hover {
 }
 
 
-#submit_button,
-#submit_buttonlog{
+.submit_button,
+.submit_buttonlog{
     font-weight: bolder;
     width: 50%;
     color: rgb(255, 255, 255);
@@ -73,12 +74,30 @@ a:hover {
     box-shadow: inset 0px -2px 14px -2px rgba(57, 57, 57, 0.58);
     background: linear-gradient(162deg, rgb(105, 180, 207) 0%, rgba(221, 6, 236, 1) 100%);
 }
-
-#submit_button:hover{
+.sbtx:hover{
     cursor: pointer;
     background: rgb(105, 181, 209);
     background: linear-gradient(162deg, rgba(105, 181, 209, 1) 0%, rgba(128, 3, 136, 1) 100%);
 }
+.gray_color{
+    background: gray;
+}
+.sbt:hover{
+    cursor: pointer;
+    background: rgb(105, 181, 209);
+    background: linear-gradient(162deg, rgba(105, 181, 209, 1) 0%, rgba(128, 3, 136, 1) 100%);
+}
+
+.bgcolor
+{
+    background: rgb(108, 185, 214);
+    background: linear-gradient(162deg, rgb(105, 180, 207) 0%, rgba(221, 6, 236, 1) 100%);
+}
+/* .sbt:hover{
+    cursor: pointer;
+    background: rgb(105, 181, 209);
+    background: linear-gradient(162deg, rgba(105, 181, 209, 1) 0%, rgba(128, 3, 136, 1) 100%);
+} */
 .fa-check-circle
 {
     position: absolute;
@@ -160,3 +179,161 @@ a:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+
+
+.settings_input{
+    /* display: inline-block; */
+    position: absolute;
+    top:50%;
+    border: 2px inset rgba(20, 55, 78, 0.18);
+    padding: 2px;
+    /* margin: 4px; */
+    height: 30%;
+    width: 100%;
+    outline: none;
+    text-align: left;
+}
+.wrap{
+    /* display:flex; */
+    position:relative;
+    height:100px;
+    margin: 0px;
+    /* margin-left:-2%;
+    margin-right:-2% */
+}
+.edit_name{
+    /* /* margin-left:10%; */
+    position:absolute;
+    height:100%;
+    width:30%;
+    left:10%;
+    /* top:-5%; */
+    text-align: center;
+    /* border:5px solid; */
+}
+.edit_surname{
+    position:absolute;
+    width:30%;
+    right: 10%;
+    height: 100%;
+    /* width:30%;
+    margin-right:20%; */
+    /* border:5px solid; */
+}
+.imx
+{
+
+    position: absolute; 
+    /* border:1px solid; */
+    margin:0px;
+    top:20%;
+    left:2px;
+    font-size: 18px;
+}
+/* 
+    display:inline-block; */
+.snr{
+    position: absolute; 
+    /* border:1px solid; */
+    margin:0px;
+    top:20%;
+    left:55%;
+    font-size: 18px;   
+
+}
+
+    /* .nazwisko
+    {
+        margin-left:75%;
+        display: inline-block;
+    } */
+
+
+    .E-mail
+    {
+        position:absolute;
+        font-size: 18px;
+        line-height:80%;
+    }
+    .edit_others{
+        border:1px solid;
+    
+    }
+    .namesettings{
+        position: absolute;
+        top:50%;
+        border: 2px inset rgba(20, 55, 78, 0.18);
+        background-color: #fdfff5;
+        padding: 2px;
+        height: 30%;
+        width: 42%;
+        left:0%;
+        outline: none;
+        text-align: left;
+
+    }
+    .surnamesettings{
+        position: absolute;
+        top:50%;
+        border: 2px inset rgba(20, 55, 78, 0.18);
+        background-color: #fdfff5;
+        padding: 2px;
+        height: 30%;
+        width: 42%;
+        left:55%;
+        outline: none;
+        text-align: left;
+    }
+.savebutton
+{
+    position:absolute;
+    right:5%;
+    height:40px;
+    width:15%;
+    background: rgb(128, 221, 255);
+    background: linear-gradient(162deg, rgba(128, 221, 255, 1) 0%,
+    rgba(83, 174, 236, 1) 32%, rgba(125, 123, 236, 1) 66%,
+    rgba(221, 6, 236, 1) 100%);
+    font-weight: 1000;
+    font-size: 14px;
+    border-radius: 8px;
+    color:white;
+    border: none;
+
+    border-color: rgb(152, 6, 154);
+
+}
+.savebutton:hover
+{
+    background:rgb(155, 13, 231);
+
+}
+
+.icon_container{
+    position:relative;
+    height:100px;
+    /* background: rgb(128, 221, 255);
+    background: linear-gradient(162deg, rgba(128, 221, 255, 1) 0%,
+    rgba(83, 174, 236, 1) 32%, rgba(125, 123, 236, 1) 66%,
+    rgba(221, 6, 236, 1) 100%); */
+}
+#settings-icon{
+    position:absolute;
+    background-image: linear-gradient(162deg, rgba(128, 221, 255, 1) 0%,
+    rgba(83, 174, 236, 1) 32%, rgba(125, 123, 236, 1) 66%,
+    rgba(221, 6, 236, 1) 100%); 
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    font-size: 100px;
+    left:40%;
+}
+
+/* #showinfo{
+    position: absolute;
+    right: 30%;
+    top:5%;
+} */

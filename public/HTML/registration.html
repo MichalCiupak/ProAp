@@ -1,277 +1,97 @@
-    <!DOCTYPE HTML>
-    <html lang="pl">
+<!DOCTYPE HTML>
+<html lang="pl">
 
-    <head>
-        <script src="jquery-1.11.3.min.js"></script>
-        <!-- <script src="apps.js"></script> -->
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <link rel="stylesheet" href="../css/style_form.css" type="text/css" />
-        <link rel="stylesheet" href="../css/fontello.css" type="text/css" />
-        <link rel="stylesheet" href="../css/style.css" type="text/css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+<head>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="apps.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="css/style_form.css" type="text/css" />
+    <link rel="stylesheet" href="css/fontello.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
 
-        <meta name="description" content="" />
+    <meta name="description" content="" />
 
 
-    </head>
+</head>
 
-    <body>
-        <div style="margin: 20px auto;" id="login-form">
-            <img src="/images/hee.png" alt="a"><br /><br />
-            <form id="register-form" >
-                <div class = wrapper>
-                    <i id = "pnicon" class="fa fa-check-circle"></i>
-                    <i id="wnicon" class ="fa fa-times-circle"></i>
-                    <div class=backgr>
-                <i class ="fa fa-user fa-2x"></i>
-                    </div>
-            <input id = "names" class="login_input" type="text" placeholder="imię" name = "name">
-            </div>
-        </br>
+<body>
+    <div style="margin: 20px auto;" id="login-form">
+        <img src="images/hee.png" alt="a"><br /><br />
+        <form action ="/register" method ="POST">
             <div class = wrapper>
-                <i id= "psicon" class= "fa fa-check-circle" id = "a2"></i>
-                <i id= "wsicon" class ="fa fa-times-circle"></i>
+                <i id = "pnicon" class="fa fa-check-circle"></i>
+                <i id="wnicon" class ="fa fa-times-circle"></i>
                 <div class=backgr>
-            <i class ="fa fa-address-card fa-2x"></i>
+            <i class ="fa fa-user fa-2x"></i>
                 </div>
-            <input id = "surnamex" class="login_input" type="text" placeholder="nazwisko" name = "surname">
+        <input id = "names" class="login_input" type="text" placeholder="imię" name = "name">
+        </div>
+    </br>
+        <div class = wrapper>
+            <i id= "psicon" class= "fa fa-check-circle" id = "a2"></i>
+            <i id= "wsicon" class ="fa fa-times-circle"></i>
+            <div class=backgr>
+        <i class ="fa fa-address-card fa-2x"></i>
             </div>
-        </br>
+        <input id = "surnamex" class="login_input" type="text" placeholder="nazwisko" name = "surname">
+        </div>
+    </br>
+        <div class = wrapper>
+            <i id ="paicon" class="fa fa-check-circle"></i>
+            <i id = "waicon" class ="fa fa-times-circle"></i>
+            <div class=backgr>
+        <i class ="fa fa-home fa-2x"></i>
+            </div>
+        <input id = "adres" class="login_input" type="text" placeholder="adres" name = "adress">
+        </div>
+    </br>
+        <div class = wrapper>
+            <i id ="peicon" class="fa fa-check-circle"></i>
+            <i id = "weicon" class ="fa fa-times-circle"></i>
+            <div class=backgr>
+        <i class ="fa fa-envelope fa-2x"></i>
+            </div>
+        <input id= "emails" class="login_input" type="text" placeholder="email" name = "email">
+    </div>
+    <!-- </div> -->
+    <br/>
+        <div class = wrapper>
+            <i id ="plicon" class="fa fa-check-circle"></i>
+            <i id = "wlicon" class="fa fa-times-circle"></i>
+            <i class ="fa fa-times-circle"></i>
+            <div class=backgr>
+        <i class ="fa fa-key fa-2x"></i>
+            </div>
+        <input id="login" class="login_input" type="text" placeholder="Login - min 5 znaków" name ="login" >
+    </div>
+    <!-- </div> -->
+    <br/>
+        <!-- <input class="login_input" type="text" placeholder="login" name ="login" ><br /><br /> -->
             <div class = wrapper>
-                <i id ="paicon" class="fa fa-check-circle"></i>
-                <i id = "waicon" class ="fa fa-times-circle"></i>
+                <i id = "ppicon" class="fa fa-check-circle"></i>
+                <i id = "wpxicon" class ="fa fa-times-circle"></i>
                 <div class=backgr>
-            <i class ="fa fa-home fa-2x"></i>
+            <i class ="fa fa-lock fa-2x"></i>
                 </div>
-            <input id = "adres" class="login_input" type="text" placeholder="adres" name = "address">
-            </div>
-        </br>
-            <div class = wrapper>
-                <i id ="peicon" class="fa fa-check-circle"></i>
-                <i id = "weicon" class ="fa fa-times-circle"></i>
-                <div class=backgr>
-            <i class ="fa fa-envelope fa-2x"></i>
-                </div>
-            <input id= "emails" class="login_input" type="text" placeholder="email" name = "email">
+        <input id = "password" class="login_input" type="password" placeholder="hasło" name = "password">
         </div>
-        <!-- </div> -->
-        <br/>
-            <div class = wrapper>
-                <i id ="plicon" class="fa fa-check-circle"></i>
-                <i id = "wlicon" class="fa fa-times-circle"></i>
-                <i class ="fa fa-times-circle"></i>
-                <div class=backgr>
-            <i class ="fa fa-key fa-2x"></i>
-                </div>
-            <input id="login" class="login_input" type="text" placeholder="Login - min 5 znaków" name ="login" >
+        <div class = "sidemenu">
+            <div id = "pinfo1" class ="passinfo" > ● Hasło musi zawierać min. 8 znaków</div>
+            <div id = "pinfo2" class ="passinfo" > ● Hasło musi zawierać min. 1 znak specjalny</div>
+            <div id = "pinfo3" class ="passinfo" > ● Hasło musi zawierać min. 1 cyfrę</div>
         </div>
-        <!-- </div> -->
-        <br/>
-            <!-- <input class="login_input" type="text" placeholder="login" name ="login" ><br /><br /> -->
-                <div class = wrapper>
-                    <i id = "ppicon" class="fa fa-check-circle"></i>
-                    <i id = "wpxicon" class ="fa fa-times-circle"></i>
-                    <div class=backgr>
-                <i class ="fa fa-lock fa-2x"></i>
-                    </div>
-            <input id = "password" class="login_input" type="password" placeholder="hasło" name = "password">
-            </div>
-            <div class = "sidemenu">
-                <div id = "pinfo1" class ="passinfo" > ● Hasło musi zawierać min. 8 znaków</div>
-                <div id = "pinfo2" class ="passinfo" > ● Hasło musi zawierać min. 1 znak specjalny</div>
-                <div id = "pinfo3" class ="passinfo" > ● Hasło musi zawierać min. 1 cyfrę</div>
-            </div>
-            <br />
-                <input id="submit_button" type="submit" value="Register now" disabled="true"><br /><br /><br />
-            </form>
-            <a href="/login"><label>Masz już konto? Zaloguj się!</label><br /></a>
-            <!-- <div class="logging">
-                <a href ="/login">
-                    <button class="btnx" type ="sumbit" name ="button"> Zaloguj się</button>
-                </form> -->
-        </div>
-        </div>
-        <script src="../js/validate.js"></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="../js/registration.js"></script>
-            <!-- var pass = document.getElementById("password");
-            var log = document.getElementById("login");
-            var em = document.getElementById("emails");
-            var adr = document.getElementById("adres");
-            var surname = document.getElementById("surnamex");
-            var namex = document.getElementById("names");
-            var pinfo1  = document.getElementById("pinfo1");
-            var pinfo2 = document.getElementById("pinfo2");
-            var pinfo3 = document.getElementById("pinfo3");
-            var dict = {};
-            var submitButton = document.getElementById("submit_button");
-            var check_dict = {}
-            function containsChars(word, list_of_all_words) {
-                return list_of_all_words.test(word);
-            }
-            function check_enabling()
-        {
-            if(Object.values(check_dict).filter(x=>x==true).length === 6)
-            {
-                submitButton.disabled = false;
-            }
-            else
-            {
-                submitButton.disabled = true    ;
-            }
-        }
-            pass.addEventListener('input', ()=>
-            {
-                if(pass.value.length != 0)
-                {
-                    pinfo1.style.display = "block";
-                    pinfo2.style.display = "block";
-                    pinfo3.style.display = "block";
-                }
-                else{
-                    pinfo1.style.display = "none";
-                    pinfo2.style.display = "none";
-                    pinfo3.style.display = "none";
-                }
-                if (containsChars(pass.value, /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/ ))
-                {
-                    pinfo2.style.display = "none";
-                    dict.specChars = true;
-                }
-                else
-                {
-                    dict.specChars = false;
-                }
-                if (containsChars(pass.value, /\d/))
-                {
-                    pinfo3.style.display = "none";
-                    dict.digits = true;
-                }
-                else
-                {
-                    dict.digits = false;
-                }
-                if(pass.value.length>=8)
-                {
-                    pinfo1.style.display = "none";
-                    dict.length = true;
-                }
-                else
-                {
-                    dict.length = false;
-                }
-                if(Object.values(dict).filter(x=>x==true).length === Object.values(dict).length)
-                {
-                    document.getElementById("ppicon").style.opacity = 1;
-                    document.getElementById("wpxicon").style.opacity = 0;
-                    check_dict.password = true;
-                    check_enabling()
-                }
-                else
-                {
-                    document.getElementById("ppicon").style.opacity = 0;
-                    document.getElementById("wpxicon").style.opacity = 1;
-                    check_dict.password = false;
-                    check_enabling()
-                }
+        <br />
+            <input class="submit_button sbtx" type="submit" value="Zarejestruj" disabled="true"><br /><br /><br />
+        </form>
+        <a href="/login"><label>Masz już konto? Zaloguj się!</label><br /></a>
+    </div>
+    </div>
+    <script src="../js/validate.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/registration.js"></script>
 
-            })
-        log.addEventListener('input', ()=>
-        {
-            if(log.value.length > 4)
-            {
-                document.getElementById("plicon").style.opacity = 1;
-                document.getElementById("wlicon").style.opacity = 0;
-                check_dict.log = true;
-                check_enabling()
+</body>
 
-            }
-            else
-            {
-                document.getElementById("wlicon").style.opacity = 1;
-                document.getElementById("plicon").style.opacity = 0;
-                check_dict.log = false;
-                check_enabling()
-            }
-
-        })
-        em.addEventListener('input', ()=>
-        {
-            if(em.value.length > 0 && em.value.indexOf("@")>-1 && em.value.indexOf(".") >-1 )
-            {
-                document.getElementById("peicon").style.opacity = 1;
-                document.getElementById("weicon").style.opacity = 0;
-                check_dict.em = true;
-                check_enabling()
-
-            }
-            else
-            {
-                document.getElementById("peicon").style.opacity = 0;
-                document.getElementById("weicon").style.opacity = 1;
-                check_dict.em = false;
-                check_enabling()
-            }
-
-        })
-        adr.addEventListener('input', ()=>
-        {
-            if(adr.value.length > 0)
-            {
-                document.getElementById("paicon").style.opacity = 1;
-                document.getElementById("waicon").style.opacity = 0;
-                check_dict.adr = true;
-                check_enabling()
-            }
-            else
-            {
-                document.getElementById("paicon").style.opacity = 0;
-                document.getElementById("waicon").style.opacity = 1;
-                check_dict.adr =false;
-                check_enabling()
-            }
-
-        })
-        surname.addEventListener('input', ()=>
-        {
-            if(surname.value.length > 0)
-            {
-                document.getElementById("psicon").style.opacity = 1;
-                document.getElementById("wsicon").style.opacity = 0;
-                check_dict.surname = true;
-                check_enabling()
-            }
-            else
-            {
-                document.getElementById("psicon").style.opacity = 0;
-                document.getElementById("wsicon").style.opacity = 1;
-                check_dict.surname = false;
-                check_enabling()
-            }
-
-        })
-        namex.addEventListener('input', ()=>
-        {
-            if(namex.value.length > 0)
-            {
-                document.getElementById("pnicon").style.opacity = 1;
-                document.getElementById("wnicon").style.opacity = 0;
-                check_dict.namex =true;
-                check_enabling()
-
-            }
-            else
-            {
-                document.getElementById("pnicon").style.opacity = 0;
-                document.getElementById("wnicon").style.opacity = 1;
-                check_dict.namex = false;
-                check_enabling()
-            }
-
-        })
-
-
-        </script> -->
-    </body>
-    </html>
+</html>
