@@ -3,6 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="../css/style.css" type="text/css" />
     <link rel="stylesheet" href="../css/switch.css" type="text/css" />
     <link rel="stylesheet" href="../css/fontello.css" type="text/css" />
@@ -15,38 +23,48 @@
     <header>
       <img style="padding-top: 20px" src="../images/logo2.png" alt="a" />
     </header>
-    <div class="navigation_bar">
-      <div class="logo"><img src="../images/hee.png" alt="a" /></div>
-      <div class="browser">
-        <form action="order.php" method="post">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Navbar</a>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
           <input
-            class="browser_input"
+            class="form-control mr-sm-2"
             type="search"
-            name="phrase"
-            placeholder="What do you want ot find?"
+            placeholder="Search"
+            aria-label="Search"
           />
-          <button class="browser_button" type="button">
-            <i class="icon-search"></i>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
           </button>
         </form>
       </div>
-      <div class="login_button">
-        <a href="/login">
-          <button class="btn" type="sumbit" name="button">Log in</button>
-        </a>
-      </div>
-      <div class="settings_menu">
-        <div id="dark_theme">
-          dark
-          <label class="switch">
-            <input type="checkbox" />
-            <span class="slider round"></span>
-          </label>
-        </div>
-      </div>
-      <div style="clear: both"></div>
-    </div>
-    <!-- <div class="navbar">
+    </nav> -->
+    <div class="navbar">
       <div class="nav-logo"><img src="../images/hee.png" alt="a" /></div>
       <div class="nav-search">
         <form action="order.php" method="post">
@@ -67,9 +85,8 @@
       </div>
       <div class="nav-dark-theme-toggle">
         <p>dark theme toggle</p>
-
       </div>
-    </div> -->
+    </div>
     <div class="category_menu">
       <div class="category_type" style="margin-left: 20%" data-category="All">
         All
@@ -106,6 +123,14 @@
   </body>
 
   <!-- scripts -->
+
+  <!-- bootstrap -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"
+  ></script>
+  <!-- axios -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
   <script src="../js/main.js"></script>

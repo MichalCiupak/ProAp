@@ -14,6 +14,21 @@ const fs = require("fs");
 
 const getAllProducts = async (req, res) => {
   const { name, category, numericFilters, sort } = req.query;
+  const availableCategories = [
+    "Books",
+    "Toys",
+    "Electronics And Computers",
+    "Sports And Outdoors",
+  ];
+  if (availableCategories.indexOf(category) === -1) {
+    return res
+      .status(StatusCodes.BAD_REQUEST)
+      .json({
+        msg: "Provided category is not supported!",
+        nbHits: 0,
+        products: [],
+      });
+  }
   console.log(req.query);
   if (name) {
     req.query.name = { $regex: name, $options: "i" };
