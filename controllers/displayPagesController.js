@@ -19,7 +19,7 @@ const displaySingleProductPage = async (req, res) => {
 const displayMainPage = async (req, res) => {
   return res
     .status(200)
-    .sendFile(path.join(__dirname, "../public/HTML/temp-index.html"));
+    .sendFile(path.join(__dirname, "../public/HTML/index.html"));
 };
 
 const displayMailConfirmationPage = async (req, res) => {
