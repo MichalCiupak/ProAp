@@ -237,6 +237,13 @@ footer {
     width: 15%;
   }
 }
+.error
+{
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(96, 35, 35);
+}
 #error_exc
 {
     color:red;
