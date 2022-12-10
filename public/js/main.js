@@ -60,10 +60,6 @@ async function displayProducts(products) {
 }
 
 async function start() {
-  // localStorage.setItem(
-  //   "token",
-  //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRGVueXMiLCJzdXJuYW1lIjoiRm9rYSIsImVtYWlsIjoibm90LWRlbnlzQGdtYWlsLmNvbSIsInVzZXJJRCI6IjYzOGI3NzIzOGEwZTIzYTk3ODkzMzUwMyIsImlhdCI6MTY3MDQ1MjYxNCwiZXhwIjoxNjczMDQ0NjE0fQ.WX8bykLUIO8-iPHeWVx-dmtzB2sPcumOMCZWlhl2QQM"
-  // );
   await checkToken();
   if (hasValidToken && currentUser) {
     console.log(currentUser);
