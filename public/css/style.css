@@ -237,3 +237,8 @@ footer {
     width: 15%;
   }
 }
+#error_exc
+{
+    color:red;
+    font-size: 28px;
+}
