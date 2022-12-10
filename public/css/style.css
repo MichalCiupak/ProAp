@@ -1,7 +1,7 @@
 body {
   min-width: 700px;
   background-color: #e4e4e4;
-  color: #131212;
+  color: rgb(63, 63, 63);
   font-family: "Lato", sans-serif;
   font-size: 30px;
   margin: 0px;
@@ -36,6 +36,8 @@ header {
 
 .category_menu {
   width: 100%;
+  display: flex;
+  justify-content: center;
   color: #272727;
   font-size: 20px;
   text-align: center;
@@ -43,9 +45,12 @@ header {
 }
 
 .category_type {
-  width: 15%;
+  width: 14%;
   float: left;
   padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .category_type:hover {
@@ -102,8 +107,18 @@ header {
   color: #41387a;
 }
 
+.message_for_logged{
+  margin-top: 0;
+}
+
+.login_button{
+  height: 45px;
+
+}
+
 .btn {
   background: #ff4742;
+
   border: 1px solid #ff4742;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
@@ -194,13 +209,7 @@ header {
   cursor: pointer;
 }
 
-.sticky {
-  width: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
-}
+
 .fa-exclamation-circle {
   text-align: left;
   font-size: 2888px;
