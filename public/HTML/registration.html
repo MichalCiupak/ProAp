@@ -3,12 +3,12 @@
 
 <head>
     <script src="jquery-1.11.3.min.js"></script>
-    <script src="apps.js"></script>
+    <!-- <script src="apps.js"></script> -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="stylesheet" href="css/style_form.css" type="text/css" />
-    <link rel="stylesheet" href="css/fontello.css" type="text/css" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../css/style_form.css" type="text/css" />
+    <link rel="stylesheet" href="../css/fontello.css" type="text/css" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
 
     <meta name="description" content="" />
@@ -18,7 +18,7 @@
 
 <body>
     <div style="margin: 20px auto;" id="login-form">
-        <img src="images/hee.png" alt="a"><br /><br />
+        <img src="../images/hee.png" alt="a"><br /><br />
         <form action ="/register" method ="POST">
             <div class = wrapper>
                 <i id = "pnicon" class="fa fa-check-circle"></i>
@@ -85,6 +85,7 @@
         <br />
             <input class="submit_button sbtx" type="submit" value="Register" disabled="true"><br /><br /><br />
         </form>
+        <p class="error">Provided email is already used. Log in using that email or use another email</p>
         <a href="/login"><label>Do you have an account? Sign in!</label><br /></a>
     </div>
     </div>

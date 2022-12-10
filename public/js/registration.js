@@ -3,19 +3,23 @@ const surnameInput = document.querySelector("#surnamex");
 const emailInput = document.querySelector("#emails");
 const addressInput = document.querySelector("#adres");
 const passwordInput = document.querySelector("#password");
-const registerForm = document.querySelector("#register-form");
-const submitInput = document.querySelector("#submit_button");
-
+const registerForm = document.querySelector("form");
+const submitInput = document.querySelector(".submit_button");
+const errorParagraph = document.querySelector(".error");
 // DOES NOT WORK
 registerForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log(2);
+  console.log(1);
 });
 
 //WORKS
 submitInput.addEventListener("submit", async function (e) {
   e.preventDefault();
-  console.log(1);
+  console.log(2);
+});
+submitInput.addEventListener("click", async function (e) {
+  e.preventDefault();
+  console.log(3);
   try {
     const resp = await axios.post("/api/auth/register", {
       name: nameInput.value,
@@ -30,6 +34,8 @@ submitInput.addEventListener("submit", async function (e) {
     window.location.href = "/";
   } catch (error) {
     console.log(error);
-    console.log(`Cannot create user `);
+    errorParagraph.innerHTML =
+      "Provided email is already used. Log in using that email or use another email";
+    console.log(`Cannot create user`);
   }
 });
