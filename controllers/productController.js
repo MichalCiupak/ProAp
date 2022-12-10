@@ -21,13 +21,11 @@ const getAllProducts = async (req, res) => {
     "Sports And Outdoors",
   ];
   if (availableCategories.indexOf(category) === -1) {
-    return res
-      .status(StatusCodes.BAD_REQUEST)
-      .json({
-        msg: "Provided category is not supported!",
-        nbHits: 0,
-        products: [],
-      });
+    return res.status(StatusCodes.BAD_REQUEST).json({
+      msg: "Provided category is not supported!",
+      nbHits: 0,
+      products: [],
+    });
   }
   console.log(req.query);
   if (name) {
