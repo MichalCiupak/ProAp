@@ -1,12 +1,13 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 
+
 <head>
     <script src="jquery-1.11.3.min.js"></script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="stylesheet" href="../css/style_form.css" type="text/css" />
-    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../css/menu.css" type="text/css" /> 
+     <!-- <link rel="stylesheet" href="css/style_form.css" type="text/css" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
     <meta name="description" content="" />
 
@@ -16,15 +17,15 @@
 <body>
             <div id="userfield">
             <div class = "sidebarmenu">
-            <ul>
-                <li> <a href = "/menu" class = "baritem"><i id ="cdprof" class ="fa fa-home fa-2x"></i> Home</a></li>
-                <li> <a href = "/settings" class = "baritem"><i id ="cdprof" class ="fa fa-user fa-2x"></i> Ustawienia</a></li>
-                <li> <a href = "/bag" class = "baritem"><i id = "bag" class ="fa fa-shopping-bag fa-2x"></i> Mój koszyk</a></li>
-                <li> <a href = "/info" class = "baritem"><i id = "info" class="fa fa-question fa-2x"></i> Info</a></li>
-            <ul>
+                <ul>
+                    <li id = "menux"> <a href = "/HTML/menu.html" class = "baritem" id = "menus" ><i id ="cdprof" class ="fa fa-home fa-2x"></i> Home</a></li>         
+                    <li id = "settingsx"> <a href = "/HTML/settings.html" class = "baritem" id = "settingss"><i id ="cdprof" class ="fa fa-user fa-2x"></i> Ustawienia</a></li>
+                    <li id ="bagx"> <a href = "/HTML/bag.html" class = "baritem" id = "bags" ><i id = "bag" class ="fa fa-shopping-bag fa-2x"></i> Mój koszyk</a></li>
+                    <li id = "infox"> <a href = "/HTML/info.html" class = "baritem" id = "infos"><i id = "info" class="fa fa-question fa-2x"></i> Info</a></li>
+                <ul>
             </div>
             <div class = "infobox">
-                <!-- <font size="18"><i class ="fa fa-home fa-3x big-icon"></i></font> -->
+                <font size="18"><i class ="fa fa-home fa-3x big-icon"></i></font>
                 <h1>Witaj na naszej stronie!</h1>
                 <textarea class = "information" cols = "60" rows = "15" readonly >Aby przejść do ustawień konta, wybierz zakładkę Ustawienia po lewej stronie ekranu.&#13;&#10;&#13;&#10;&#13;&#10;Jeśli chcesz zobaczyć wybrane przedmioty, wejdź w koszyk.&#13;&#10;&#13;&#10;&#13;&#10;Jeżeli szukasz podstawowych informacji o stronie, wybierz zakładkę Info.
                 </textarea>
@@ -32,5 +33,5 @@
             </div>
     </div>
 </body>
-
+    <script src="../js/showfield.js"></script>
 </html>

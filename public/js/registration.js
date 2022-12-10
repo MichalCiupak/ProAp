@@ -34,8 +34,7 @@ submitInput.addEventListener("click", async function (e) {
     window.location.href = "/";
   } catch (error) {
     console.log(error);
-    errorParagraph.innerHTML =
-      "Provided email is already used. Log in using that email or use another email";
+    errorParagraph.style.display = "block";
     console.log(`Cannot create user`);
   }
 });
