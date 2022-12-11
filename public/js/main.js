@@ -4,6 +4,7 @@ const loginBtn = document.querySelector(".login_button");
 let logOutBtn = null;
 let currentUser = null;
 let hasValidToken = true;
+
 categoryBtns.forEach((categoryBtn) => {
   categoryBtn.addEventListener("click", async function (e) {
     displayLoading();
@@ -31,9 +32,9 @@ async function displayProducts(products) {
   const productsContainerDOM = products
     .map((product) => {
       let productDescriptionDOM = `<p class="product-description">${
-        product.description.length < 20
-          ? product.description.slice(0, 20)
-          : product.description.slice(0, 20) +
+        product.description.length < 35
+          ? product.description.slice(0, 35)
+          : product.description.slice(0, 35) +
             `<a href="/singleProduct/${product._id}"> ...</a>`
       }</p>`;
       return `<article class="product">
@@ -63,14 +64,17 @@ async function start() {
   await checkToken();
   if (hasValidToken && currentUser) {
     console.log(currentUser);
-    loginBtn.innerHTML = `<p>Hello,<a href="/HTML/settings.html"> ${currentUser.name}</a>
+    loginBtn.innerHTML = `          <p class="message_for_logged">
+    Hello,<a href="/HTML/settings.html">
+      <span style="padding-right: 15px">${currentUser.name}</span></a
+    >
     <button class="log-out-btn btn">Log Out</button>
-    </p>`;
+  </p>`;
     logOutBtn = loginBtn.querySelector(".log-out-btn");
     logOutBtn.addEventListener("click", logOut);
   } else {
     loginBtn.innerHTML = `<a href="/login">
-    <button class="btn" type="sumbit" name="button">Log in</button>
+    <button class="btn" type="sumbit" name="button">Log In</button>
   </a>`;
     logOutBtn = null;
   }
@@ -97,13 +101,13 @@ async function checkToken() {
   }
 }
 function displayLoading() {
-  mainContainer.innerHTML = ` <section class="loading-gif-container">
+  mainContainer.innerHTML = `<section class="loading-gif-container">
   <p>Fetching Products. Please wait...</p>
 </section>`;
 }
 function displayNotProductsFound() {
   mainContainer.innerHTML = ` <section class="loading-gif-container">
-  <p>No products matches with your search</p>
+  <p style="margin-top:60px;">No products matches with your search</p>
 </section>`;
 }
 

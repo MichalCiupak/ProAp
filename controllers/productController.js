@@ -20,7 +20,7 @@ const getAllProducts = async (req, res) => {
     "Electronics And Computers",
     "Sports And Outdoors",
   ];
-  if (availableCategories.indexOf(category) === -1) {
+  if (category && availableCategories.indexOf(category) === -1) {
     return res.status(StatusCodes.BAD_REQUEST).json({
       msg: "Provided category is not supported!",
       nbHits: 0,

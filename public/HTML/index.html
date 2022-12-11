@@ -34,15 +34,15 @@
         </div>
 
         <div class="login_button">
-          <!-- <a href="/register">
+          <a href="/login">
             <button class="btn" type="sumbit" name="button">Log In</button>
-          </a> -->
-          <p class="message_for_logged">
+          </a>
+          <!-- <p class="message_for_logged">
             Hello,<a href="/HTML/settings.html">
               <span style="padding-right: 15px">Michał</span></a
             >
             <button class="log-out-btn btn">Log Out</button>
-          </p>
+          </p> -->
         </div>
 
         <div class="settings_menu">
@@ -59,17 +59,21 @@
       </div>
 
       <div class="category_menu">
-        <div class="category_type">All</div>
-        <div class="category_type">Books</div>
-        <div class="category_type">Toys</div>
-        <div class="category_type">Electronics And Computers</div>
-        <div class="category_type">Sports And Outdoors</div>
+        <div class="category_type" data-category="All">All</div>
+        <div class="category_type" data-category="Books">Books</div>
+        <div class="category_type" data-category="Toys">Toys</div>
+        <div class="category_type" data-category="Electronics And Computers">
+          Electronics And Computers
+        </div>
+        <div class="category_type" data-category="Sports And Outdoors">
+          Sports And Outdoors
+        </div>
         <div style="clear: both"></div>
       </div>
 
       <div
         style="
-          height: 745px;
+          min-height: 80vh;
           background: rgb(128, 221, 255);
           background: linear-gradient(
             162deg,
@@ -79,10 +83,29 @@
             rgba(221, 6, 236, 1) 100%
           );
         "
+        class="main-container"
       >
         lorem1234
       </div>
-      <footer>fff</footer>
+      <footer
+        style="
+          text-align: center;
+          background: hsl(240, 51%, 64%);
+          padding-top: 40px;
+          color: white;
+        "
+      >
+        &copy;2022 Hee Hee All rights reserved.
+      </footer>
     </div>
   </body>
+  <!-- axios -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"
+    integrity="sha512-zJYu9ICC+mWF3+dJ4QC34N9RA0OVS1XtPbnf6oXlvGrLGNB8egsEzu/5wgG90I61hOOKvcywoLzwNmPqGAdATA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="../js/main.js"></script>
 </html>
