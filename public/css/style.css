@@ -168,8 +168,6 @@ header {
   font-weight: bold;
 }
 .passwordinfo {
-  /* float:left; */
-  /* display:inline; */
   text-align: left;
   padding-left: 25%;
   font-size: 14px;
@@ -252,7 +250,6 @@ footer {
   font-size: 28px;
 }
 .loading-gif-container {
-  /* width: 100%;*/
   height: 100%;
   display: flex;
   justify-content: center;
@@ -260,7 +257,6 @@ footer {
 }
 
 .loading-gif {
-  /* width: 50px; */
   height: 150px;
 }
 
@@ -287,7 +283,6 @@ footer {
 }
 
 .card-img-wrapper {
-  /* width: 100%; */
   height: 200px;
   object-fit: cover;
 }
@@ -299,8 +294,6 @@ footer {
   height: 100%;
   object-fit: cover;
   display: block;
-  /* padding: 0;
-  margin: 0; */
 }
 
 .main-container {
