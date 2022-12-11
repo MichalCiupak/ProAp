@@ -24,7 +24,10 @@ const auth = async (req, res, next) => {
     name: payload.name,
     email: payload.email,
     surname: payload.surname,
+    address: payload.address,
   };
+  console.log(`This is from authentication middleware JS. Req.user:`);
+  console.log(req.user);
   next();
 };
 

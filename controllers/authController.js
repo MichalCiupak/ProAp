@@ -13,6 +13,7 @@ const login = async (req, res) => {
     surname: userFound.surname,
     email: userFound.email,
     userID: userFound._id,
+    address: userFound.address,
   });
   res.status(StatusCodes.OK).json({ msg: "OK", token });
 };
@@ -26,6 +27,7 @@ const register = async (req, res) => {
     surname: newUser.surname,
     email: newUser.email,
     userID: newUser._id,
+    address: newUser.address,
   });
 
   return res

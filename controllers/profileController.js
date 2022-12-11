@@ -11,6 +11,7 @@ const getProfileData = async (req, res) => {
     name: user.name,
     surname: user.surname,
     email: user.email,
+    address: user.address,
   });
 };
 
