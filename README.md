@@ -22,6 +22,7 @@ Zadaniem jest implementacja sklepu internetowego z możliwościami: symulacji za
 - React
 ## 4. Instrukcja pobierania
 - Sklonowanie i odpalenie instalatora przy użyciu komendy : 
-```
-git clone https://gitlab-stud.elka.pw.edu.pl/dfokashc/pap22z-z37.git && cd pap22z-z37 && chmod u+x project_37.sh && ./project_37.sh
+```sh
+git clone https://gitlab-stud.elka.pw.edu.pl/dfokashc/pap22z-z37.git && cd pap22z-z37 && sudo apt install nodejs && sudo apt install npm && npm i && node app.js
+
 ```
