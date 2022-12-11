@@ -17,15 +17,15 @@
 
 <body>
     <div id="login-form">
-        <form action="/login" method ="POST">
-        <img src="images/hee.png" alt="a"><br /><br />
+        <form id="login-formm">
+        <img src="images/hee.png" alt="a"></br></br>
     
         <div class = wrapper>
             <div class=backgr>
         <i class ="fa fa-user fa-2x"></i>
             </div>
             <input class="login_input" type="text" placeholder="Login or email" name = "username"> 
-    </div>
+        </div>
 </br>
         <!-- <input class="login_input" type="text" placeholder="Login lub email" name = "username"><br /><br /> -->
         <div class = wrapper>
@@ -34,11 +34,22 @@
             </div>
             <input class="login_input" type="password" placeholder="Password" name="password">
     </div>
-</br>
-        <br />
-            <input class="submit_buttonlog sbt" type="submit" value="Log in"><br /><br /><br />
+        </br>
+        </br>
+            <input class="submit_buttonlog sbt" type="submit" value="Log in"></br></br></br>
         </form>
-        <a href="/register"><label>Don't you have an account? Register now!</label><br /></a>
+        <p class="error" style="visibility:hidden; margin: 0; font-size: 1rem;">
+            <!-- <i id = "error_exc" class ="fa fa-exclamation-triangle"></i> User with provided credentials does not exist -->
+        </p></br>
+    
+        <!-- <p class="error" style="display:block;"><i id = "error_exc" class ="fa fa-exclamation-triangle"></i> Please fill all fields</p> -->
+    </br>
+        <a href="/register"><label>Don't you have an account? Register now!</label></br></a>
+    </div>
 </body>
+<!-- axios -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js" integrity="sha512-zJYu9ICC+mWF3+dJ4QC34N9RA0OVS1XtPbnf6oXlvGrLGNB8egsEzu/5wgG90I61hOOKvcywoLzwNmPqGAdATA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+
+<script src="../js/login.js"></script>
 </html>
