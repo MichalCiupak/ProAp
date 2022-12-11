@@ -28,6 +28,11 @@ body{
     box-sizing: border-box;
     width:30px;
 }
+#text_info {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    word-spacing: 3px;
+    padding: 10px;
+}
 .sidebarmenu
 {
     position: relative;
