@@ -67,7 +67,12 @@ const getSingleProduct = async (req, res) => {
   const id = req.params.productID;
   try {
     const product = await Product.findById(id);
-    return res.status(200).json({ msg: "OK", product });
+    if (product) {
+      return res.status(200).json({ msg: "OK", product });
+    }
+    return res
+      .status(StatusCodes.BAD_REQUEST)
+      .json({ msg: "No product with provided ID" });
   } catch (error) {
     return res
       .status(StatusCodes.BAD_REQUEST)

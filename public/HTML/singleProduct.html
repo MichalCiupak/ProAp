@@ -4,11 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Single Product</title>
   </head>
   <body>
-    <h1>single Product with id: <span></span></h1>
+    <header>
+      <a href="/">
+        <img style="padding-top: 20px" src="../images/logo2.png" alt="a" />
+      </a>
+    </header>
+    <h1 class="loading-text">Fetching Product...</h1>
+    <h1 class="error-text" style="text-align: center">
+      This Product no more exists or it wat sold...
+    </h1>
+    <section class="single-product-center">
+      <div class="product-wrapper">
+        <article class="single-product-img-container">
+          <img
+            class="single-product-img"
+            src="https://res.cloudinary.com/dz3svcgsp/image/upload/v1670452629/cool%20shop/asv4wy0ncfflc7gifzlf.webp"
+            alt=""
+          />
+        </article>
+        <div class="product-info">
+          <h2 class="product-title">ocun shoes</h2>
+          <h5 class="product-company">companys</h5>
+          <span class="product-price">55$</span>
+          <p class="product-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Perferendis eos eaque ullam inventore dolorum nihil vel obcaecati
+            blanditiis. Quibusdam, veritatis praesentium facere atque nesciunt
+            dolor numquam iste officia nemo nam maiores pariatur possimus totam
+            perspiciatis cupiditate corrupti commodi consectetur! Culpa corporis
+            perferendis obcaecati accusamus non sint excepturi. Eveniet,
+            consequatur repellat.
+          </p>
+          <button class="add-to-cart-btn">Add To Cart</button>
+        </div>
+      </div>
+    </section>
   </body>
 
-  <script src="../singleProduct.js"></script>
+  <!-- axios -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"
+    integrity="sha512-zJYu9ICC+mWF3+dJ4QC34N9RA0OVS1XtPbnf6oXlvGrLGNB8egsEzu/5wgG90I61hOOKvcywoLzwNmPqGAdATA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="../js/singleProduct.js"></script>
 </html>
