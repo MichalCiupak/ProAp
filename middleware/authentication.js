@@ -9,11 +9,15 @@ const { UnAuthenticatedError } = require("../errors");
 const auth = async (req, res, next) => {
   // check header
   const token = req.headers.authorization;
+  console.log("From auth middleware first bruhh");
+  console.log(token);
   if (!token) {
     throw new UnAuthenticatedError("No token provided!");
   }
-
+  console.log(1);
   const payload = isTokenValid(token);
+  console.log(2);
+
   console.log("payload:");
   console.log(payload);
   if (!payload) {
@@ -25,6 +29,7 @@ const auth = async (req, res, next) => {
     email: payload.email,
     surname: payload.surname,
     address: payload.address,
+    balance: payload.balance,
   };
   console.log(`This is from authentication middleware JS. Req.user:`);
   console.log(req.user);

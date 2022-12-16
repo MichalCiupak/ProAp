@@ -12,6 +12,7 @@ const getProfileData = async (req, res) => {
     surname: user.surname,
     email: user.email,
     address: user.address,
+    balance: user.balance,
   });
 };
 

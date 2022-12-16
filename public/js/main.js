@@ -51,7 +51,7 @@ async function displayProducts(products) {
     </div>
     ${productDescriptionDOM}
     <div class="card-footer">
-        <button class="add-to-cart-btn">Add To Cart</button>
+        <button class="add-to-cart-btn" data-id=${product._id}>Add To Cart</button>
     </div>
 </div>
 </article>`;
@@ -81,6 +81,18 @@ async function start() {
   displayLoading();
   const products = await fetchProducts();
   displayProducts(products);
+  const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+  addToCartBtns.forEach(async (addToCartBtn) => {
+    addToCartBtn.addEventListener("click", async function () {
+      checkToken();
+      if (hasValidToken && currentUser) {
+        addProductToLocalStorage(this.dataset.id);
+      } else {
+        console.log(1);
+        window.location.href = "/login";
+      }
+    });
+  });
 }
 
 async function checkToken() {
@@ -93,10 +105,14 @@ async function checkToken() {
       const getUserData = await axios.get("/api/profile", { headers });
       currentUser = getUserData.data;
       hasValidToken = true;
+      if (localStorage.getItem("cart") === null) {
+        localStorage.setItem("cart", "[]");
+      }
     } catch (error) {
       console.log(error);
       hasValidToken = false;
       currentUser = null;
+      localStorage.clear();
     }
   }
 }
@@ -114,6 +130,14 @@ function displayNotProductsFound() {
 async function logOut() {
   localStorage.clear();
   window.location.reload();
+}
+
+function addProductToLocalStorage(productID) {
+  let cart_value = JSON.parse(localStorage.getItem("cart"));
+  if (!cart_value.includes(productID)) {
+    cart_value.push(productID);
+    localStorage.setItem("cart", JSON.stringify(cart_value));
+  }
 }
 
 start();

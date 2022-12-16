@@ -4,16 +4,7 @@ const productID = pathname.slice("/singleProduct/".length);
 console.log(pathname);
 console.log(productID);
 console.log(pathname.indexOf("/singleProduct/"));
-const span = document.querySelector("span");
 
-span.innerHTML = productID;
-
-const productTitle = document.querySelector(".product-title");
-const productCompeny = document.querySelector(".product-company");
-const productPrice = document.querySelector(".product-price");
-const productDesc = document.querySelector(".product-description");
-const addToCartBtn = document.querySelector(".add-to-cart-btn");
-const productImg = document.querySelector(".single-product-img");
 const loadingText = document.querySelector(".loading-text");
 const errorText = document.querySelector(".error-text");
 const productWrapper = document.querySelector(".product-wrapper");
@@ -42,13 +33,16 @@ async function start() {
     <p class="product-description">
     ${product.description}
     </p>
-    
+    <div class="btn-container">
     <button class="add-to-cart-btn">Add To Cart</button>
-  `;
+    <a href="/">
+      <button class="btn">Go Back</button>
+    </a>
+  </div>  `;
   } catch (error) {
     displayErrorText();
+    hideLoading();
   }
-
   hideLoading();
 }
 
