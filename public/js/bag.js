@@ -40,6 +40,23 @@ function displayProducts(products, container) {
   </article>`;
     })
     .join("");
+  const removeFromCartBtns = document.querySelectorAll(".remove-from-cart-btn");
+  removeFromCartBtns.forEach((removeFromCartBtn) => {
+    removeFromCartBtn.addEventListener("click", function (e) {
+      const productID = this.dataset.id;
+      console.log(productID);
+      let cart = JSON.parse(localStorage.getItem("cart"));
+      localStorage.setItem(
+        "cart",
+        JSON.stringify(
+          cart.filter((currentID) => {
+            return currentID !== productID;
+          })
+        )
+      );
+      document.location.reload();
+    });
+  });
 }
 
 start();
