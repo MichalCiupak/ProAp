@@ -88,7 +88,7 @@ ul li:hover {
 } */
 
 .infobox {
-  /* position: relative; */
+  position: relative;
   /* height: 100%;
     background:red; */
   text-align: center;
@@ -268,4 +268,30 @@ ul li:hover {
   max-height: 400px;
   margin-bottom: 2rem;
   background: hsl(60, 94%, 86%);
+}
+.buy-btn {
+  position: absolute;
+  padding: 8px 10px;
+  bottom: 10px;
+  left: calc(50% - 39px);
+  font-size: 1rem;
+  background: linear-gradient(
+    162deg,
+    rgb(105, 180, 207) 0%,
+    rgba(221, 6, 236, 1) 100%
+  );
+  border: transparent;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  box-shadow: var(--light-shadow);
+}
+.buy-btn:hover {
+  cursor: pointer;
+  box-shadow: var(--dark-shadow);
+
+  /* scale: 1.01; */
 }
