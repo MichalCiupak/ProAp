@@ -18,6 +18,18 @@ categoryBtns.forEach((categoryBtn) => {
       displayNotProductsFound();
     } else {
       displayProducts(products);
+      const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+      addToCartBtns.forEach(async (addToCartBtn) => {
+        addToCartBtn.addEventListener("click", async function () {
+          checkToken();
+          if (hasValidToken && currentUser) {
+            addProductToLocalStorage(this.dataset.id);
+          } else {
+            console.log(1);
+            window.location.href = "/login";
+          }
+        });
+      });
     }
   });
 });
