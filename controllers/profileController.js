@@ -1,4 +1,5 @@
 const { StatusCodes } = require("http-status-codes");
+const { BadRequestError } = require("../errors");
 const User = require("../models/User");
 const getProfileData = async (req, res) => {
   if (!req.user) {
@@ -16,4 +17,27 @@ const getProfileData = async (req, res) => {
   });
 };
 
-module.exports = { getProfileData };
+const addBalance = async (req, res) => {
+  const additionalBalance = +req.params.value;
+  // check if value is number
+  if (isNaN(additionalBalance)) {
+    throw new BadRequestError("Should be number not string!");
+  }
+  if (additionalBalance < 0) {
+    throw new BadRequestError("Value can not be negative!");
+  }
+  let user = await User.findById(req.user.userID);
+  const newBalance = user.balance + additionalBalance;
+  user = await User.findByIdAndUpdate(
+    req.user.userID,
+    {
+      balance: newBalance,
+    },
+    {
+      new: true,
+    }
+  );
+  return res.status(StatusCodes.OK).json({ msg: user });
+};
+
+module.exports = { getProfileData, addBalance };
