@@ -34,7 +34,7 @@ categoryBtns.forEach((categoryBtn) => {
   });
 });
 
-async function fetchProducts(url = "/api/products") {
+async function fetchProducts(url = "/api/products?available=true") {
   let response = await axios.get(url);
   products = response.data.products;
   return products;
