@@ -5,6 +5,8 @@ const {
   getSingleProduct,
   createProduct,
   deleteProduct,
+  buyProduct,
+
   updateProduct,
   // displaySingleProductPage,
   // displayMainPage,
@@ -24,4 +26,5 @@ router
   .delete(deleteProduct)
   .patch(updateProduct);
 
+router.route("/buy/:productID").post(authenticateMiddleware, buyProduct);
 module.exports = router;

@@ -36,6 +36,7 @@ const userSchema = mongoose.Schema({
     type: String,
     required: [true, "please provide address"],
   },
+  boughtProducts: [{ type: mongoose.ObjectId, ref: "Product" }],
 });
 
 module.exports = mongoose.model("User", userSchema);

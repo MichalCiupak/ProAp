@@ -43,11 +43,27 @@ class BadFileError extends GeneralAPIError {
   }
 }
 
+class ProductNotAvailable extends GeneralAPIError {
+  constructor(message) {
+    super(message);
+    this.statusCode = StatusCodes.GONE;
+  }
+}
+
+class NotEnoughMoney extends GeneralAPIError {
+  constructor(message) {
+    super(message);
+    this.statusCode = StatusCodes.PAYMENT_REQUIRED;
+  }
+}
+
 module.exports = {
+  NotEnoughMoney,
   GeneralAPIError,
   BadRequestError,
   NotFoundError,
   UnAuthorizedError,
   UnAuthenticatedError,
   BadFileError,
+  ProductNotAvailable,
 };

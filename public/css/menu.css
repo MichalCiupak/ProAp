@@ -89,6 +89,7 @@ ul li:hover {
 
 .infobox {
   position: relative;
+  padding-bottom: 30px;
   /* height: 100%;
     background:red; */
   text-align: center;

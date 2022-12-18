@@ -14,9 +14,7 @@ const auth = async (req, res, next) => {
   if (!token) {
     throw new UnAuthenticatedError("No token provided!");
   }
-  console.log(1);
   const payload = isTokenValid(token);
-  console.log(2);
 
   console.log("payload:");
   console.log(payload);

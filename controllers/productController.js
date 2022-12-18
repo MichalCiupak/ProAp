@@ -3,7 +3,13 @@
 const { StatusCodes } = require("http-status-codes");
 const path = require("path");
 const Product = require("../models/Product");
-const { BadFileError } = require("../errors");
+const User = require("../models/User");
+const {
+  BadFileError,
+  ProductNotAvailable,
+  NotFoundError,
+  NotEnoughMoney,
+} = require("../errors");
 const cloudinary = require("cloudinary").v2;
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
@@ -11,6 +17,7 @@ cloudinary.config({
   api_secret: process.env.CLOUD_API_SECRET,
 });
 const fs = require("fs");
+const { log } = require("console");
 
 const getAllProducts = async (req, res) => {
   const { name, category, numericFilters, sort } = req.query;
@@ -60,7 +67,7 @@ const getAllProducts = async (req, res) => {
     sortList = "createdAt";
   }
   let products = await Product.find(req.query).sort(sortList);
-  res.status(200).json({ msg: "OK", nbHits: products.length, products });
+  return res.status(200).json({ msg: "OK", nbHits: products.length, products });
 };
 
 const getSingleProduct = async (req, res) => {
@@ -108,16 +115,48 @@ const createProduct = async (req, res) => {
   reqObject.createdBy = req.user.userID;
 
   const product = await Product.create(reqObject);
-  res.status(200).json({ msg: "OK", product });
+  return res.status(200).json({ msg: "OK", product });
+};
+
+const buyProduct = async (req, res) => {
+  const productID = req.params.productID;
+  const user = await User.findById(req.user.userID);
+  let foundProduct = null;
+  try {
+    foundProduct = await Product.findById(productID);
+  } catch (error) {
+    console.log(typeof error);
+    throw new NotFoundError(`Cannot find product with id: ${productID}`);
+  }
+  if (!foundProduct.available) {
+    throw new ProductNotAvailable("This product is not available!");
+  }
+  if (!user.balance || user.balance < foundProduct.price) {
+    throw new NotEnoughMoney("You have not enough money on your cash account!");
+  }
+  await Product.findByIdAndUpdate(productID, { available: false });
+  // user.boughtProducts.push(productID);
+  await User.updateOne(
+    { _id: user._id },
+    {
+      $push: { boughtProducts: productID },
+      balance: user.balance - foundProduct.price,
+    }
+  );
+  let newUser = await User.findById(user._id);
+  console.log(newUser);
+  return res
+    .status(200)
+    .json({ msg: "OK", product: foundProduct, user: newUser });
 };
 
 const deleteProduct = async (req, res) => {
-  res.status(200).json({ msg: "OK", products: "delete single product" });
+  return res.status(200).json({ msg: "OK", products: "delete single product" });
 };
 
 // in future
 const updateProduct = async (req, res) => {
-  res.status(200).json({ msg: "OK", products: "update single product" });
+  return res.status(200).json({ msg: "OK", products: "update single product" });
 };
 module.exports = {
   getAllProducts,
@@ -125,6 +164,5 @@ module.exports = {
   createProduct,
   deleteProduct,
   updateProduct,
-  // displaySingleProductPage,
-  // displayMainPage,
+  buyProduct,
 };
