@@ -37,7 +37,9 @@ const addBalance = async (req, res) => {
       new: true,
     }
   );
-  return res.status(StatusCodes.OK).json({ msg: user });
+  return res
+    .status(StatusCodes.OK)
+    .json({ msg: "Successfully replenished balance", user });
 };
 
 module.exports = { getProfileData, addBalance };
