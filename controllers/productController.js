@@ -17,7 +17,6 @@ cloudinary.config({
   api_secret: process.env.CLOUD_API_SECRET,
 });
 const fs = require("fs");
-const { log } = require("console");
 
 const getAllProducts = async (req, res) => {
   const { name, category, numericFilters, sort } = req.query;
