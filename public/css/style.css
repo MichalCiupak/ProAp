@@ -227,11 +227,23 @@ header {
   position: relative;
 }
 
+.main-container {
+  min-height: 80vh;
+  background: rgb(128, 221, 255);
+  background: linear-gradient(162deg,
+      rgba(128, 221, 255, 1) 0%,
+      rgba(83, 174, 236, 1) 32%,
+      rgba(125, 123, 236, 1) 66%,
+      rgba(221, 6, 236, 1) 100%);
+}
+
 footer {
+  text-align: center;
+  background: hsl(240, 51%, 64%);
+  padding-top: 40px;
+  color: white;
   width: 100%;
   height: 70px;
-  background-color: #ccae63;
-  border-top: #895f30 2px solid;
 }
 
 @media screen and (max-width: 1000px) {
