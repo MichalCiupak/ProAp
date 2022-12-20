@@ -1,6 +1,9 @@
 const mainContainer = document.querySelector(".main-container");
 const categoryBtns = document.querySelectorAll(".category_type");
 const loginBtn = document.querySelector(".login_button");
+const browserBtn = document.querySelector(".browser_button");
+const browserInput = document.querySelector(".browser_input");
+
 let logOutBtn = null;
 let currentUser = null;
 let hasValidToken = true;
@@ -33,7 +36,17 @@ categoryBtns.forEach((categoryBtn) => {
     }
   });
 });
-
+browserBtn.addEventListener("click", async () => {
+  const name = browserInput.value;
+  console.log(name);
+  name
+    ? (products = await fetchProducts(
+        `/api/products?available=true&name=${name}`
+      ))
+    : (products = await fetchProducts(`/api/products?available=true&`));
+  displayProducts(products);
+  addToCartBtns();
+});
 async function fetchProducts(url = "/api/products?available=true") {
   let response = await axios.get(url);
   products = response.data.products;
@@ -93,6 +106,22 @@ async function start() {
   displayLoading();
   const products = await fetchProducts();
   displayProducts(products);
+  addToCartBtns();
+  // const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+  // addToCartBtns.forEach(async (addToCartBtn) => {
+  //   addToCartBtn.addEventListener("click", async function () {
+  //     checkToken();
+  //     if (hasValidToken && currentUser) {
+  //       addProductToLocalStorage(this.dataset.id);
+  //     } else {
+  //       console.log(1);
+  //       window.location.href = "/login";
+  //     }
+  //   });
+  // });
+}
+
+function addToCartBtns() {
   const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
   addToCartBtns.forEach(async (addToCartBtn) => {
     addToCartBtn.addEventListener("click", async function () {

@@ -134,7 +134,6 @@ const buyProduct = async (req, res) => {
     throw new NotEnoughMoney("You have not enough money on your cash account!");
   }
   await Product.findByIdAndUpdate(productID, { available: false });
-  // user.boughtProducts.push(productID);
   await User.updateOne(
     { _id: user._id },
     {
