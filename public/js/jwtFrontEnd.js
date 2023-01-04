@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 let currentUser = null;
 let hasValidToken = true;
 async function checkToken() {
@@ -13,13 +14,34 @@ async function checkToken() {
       if (localStorage.getItem("cart") === null) {
         localStorage.setItem("cart", "[]");
       }
-      return true;
     } catch (error) {
       console.log(error);
       hasValidToken = false;
       currentUser = null;
-      localStorage.clear();
+      // localStorage.clear();
       return false;
     }
+    console.log("sdfgdsfg");
+    return true;
   }
 }
+async function checkAuthorizationAndDisplay() {
+  let isLogedIn = await checkToken();
+  console.log(isLogedIn);
+  if (!isLogedIn) {
+    console.log(11111111122222222222);
+
+    body.innerHTML = `<div id="error_container">
+    <label class="number_404">403</label><br />
+    <label class="number_404" style="font-size: 35px">Forbidden</label>
+    <br /><br />
+    <label style="color: rgb(38, 29, 41)"
+      >Sorry, you don't have access to this page. Please <a href=/login>log in. </a></label>
+    <br /><br />
+  </div>`;
+    return false;
+  }
+  return true;
+}
+
+checkAuthorizationAndDisplay();

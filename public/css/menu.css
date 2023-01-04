@@ -321,3 +321,7 @@ ul li:hover {
 .sidebarmenu a:visited {
   color: green;
 }
+
+#add-balance-form {
+  margin: 100px 30px 0;
+}
