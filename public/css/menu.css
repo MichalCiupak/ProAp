@@ -297,7 +297,9 @@ ul li:hover {
   /* scale: 1.01; */
 }
 
-#newproductf {
+#newproduct,
+#addBalance,
+#purchasedProducts {
   color: #66fcf1;
   font-size: 30px;
   box-sizing: border-box;
