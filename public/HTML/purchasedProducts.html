@@ -1,81 +1,99 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="pl">
-
-
-<head>
+  <head>
     <script src="jquery-1.11.3.min.js"></script>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/style_form.css" type="text/css" />
+    <link rel="stylesheet" href="../css/fontello.css" type="text/css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="stylesheet" href="../css/menu.css" type="text/css" /> 
-     <!-- <link rel="stylesheet" href="css/style_form.css" type="text/css" /> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="../css/menu.css" type="text/css" />
+    <link rel="stylesheet" href="css/style_form.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- bootstrap -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+      crossorigin="anonymous"
+    ></script>
+
     <meta name="description" content="" />
+  </head>
+  <body>
+    <div id="userfield">
+      <div class="sidebarmenu">
+        <ul>
+          <li id="menux">
+            <a href="/HTML/menu.html" class="baritem" id="menus"
+              ><i id="cdprof" class="fa fa-home fa-2x"></i> Home</a
+            >
+          </li>
+          <li id="settingsx">
+            <a href="/HTML/settings.html" class="baritem" id="settingss"
+              ><i id="cdprof" class="fa fa-user fa-2x"></i> Ustawienia</a
+            >
+          </li>
+          <li id="bagx">
+            <a href="/HTML/bag.html" class="baritem" id="bags"
+              ><i id="bag" class="fa fa-shopping-bag fa-2x"></i> Mój koszyk</a
+            >
+          </li>
+          <li id="infox">
+            <a href="/HTML/info.html" class="baritem" id="infos"
+              ><i id="info" class="fa fa-question fa-2x"></i> Info</a
+            >
+          </li>
+          <li id="newProductx">
+            <a href="/HTML/newProduct.html" class="baritem" id="newproducts"
+              ><i id="newproduct" class="fa fa-solid fa-plus"></i> Add
+              Product</a
+            >
+          </li>
+          <li id="addBalancex">
+            <a href="/HTML/addBalance.html" class="baritem" id="addBalances"
+              ><i id="addBalance" class="addBalance fa fa-usd fa-2x"></i>Add
+              Balance</a
+            >
+          </li>
+          <li id="purchasedProductsx">
+            <a
+              href="/HTML/purchasedProducts.html"
+              class="baritem"
+              id="purchasedProductss"
+            >
+              <i id="purchasedProducts" class="fa fa-history fa-2x"></i>
 
-
-</head>
-<body>
-            <div id="userfield">
-            <div class = "sidebarmenu">
-                <ul>
-                    <li id="menux">
-                      <a href="/HTML/menu.html" class="baritem" id="menus"
-                        ><i id="cdprof" class="fa fa-home fa-2x"></i> Home</a
-                      >
-                    </li>
-                    <li id="settingsx">
-                      <a href="/HTML/settings.html" class="baritem" id="settingss"
-                        ><i id="cdprof" class="fa fa-user fa-2x"></i> Ustawienia</a
-                      >
-                    </li>
-                    <li id="bagx">
-                      <a href="/HTML/bag.html" class="baritem" id="bags"
-                        ><i id="bag" class="fa fa-shopping-bag fa-2x"></i> Mój koszyk</a
-                      >
-                    </li>
-                    <li id="infox">
-                      <a href="/HTML/info.html" class="baritem" id="infos"
-                        ><i id="info" class="fa fa-question fa-2x"></i> Info</a
-                      >
-                    </li>
-                    <li id="newProductx">
-                      <a href="/HTML/newProduct.html" class="baritem" id="newproducts"
-                        ><i id="newproduct" class="fa fa-solid fa-plus"></i> Add
-                        Product</a
-                      >
-                    </li>
-                    <li id="addBalancex">
-                      <a href="/HTML/addBalance.html" class="baritem" id="addBalances"
-                        ><i id="addBalance" class="addBalance fa fa-usd fa-2x"></i>Add
-                        Balance</a
-                      >
-                    </li>
-                    <li id="purchasedProductsx">
-                      <a
-                        href="/HTML/purchasedProducts.html"
-                        class="baritem"
-                        id="purchasedProductss"
-                      >
-                        <i id="purchasedProducts" class="fa fa-history fa-2x"></i>
-          
-                        Purchased Products</a
-                      >
-                    </li>
-                  </ul>
-            </div>
-            <div class = "infobox">
-                <font size="18"><i class ="fa fa-question fa-3x big-icon"></i></font>
-                <h1>INFO</h1>
-                <p style="text-align: left">FAQ</p>
-                <p style="text-align: left">1. Jak przejść do strony głównej?</p>
-                <p style="text-align: left">Wybierz "home" w zakładce po lewej stronie ekranu</p>
-                <p style="text-align: left">2. Jak przejść do ustawień swojego konta?</h6>
-                <p style="text-align: left">Wybierz "ustawienia" w zakładce po lewej stronie ekranu</p>
-                <p style="text-align: left">3. Czy działacie charytatywnie?</h6>
-                <p style="text-align: left">NIE!!!</p>
-
-            </div>
+              Purchased Products</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="infobox">
+        <div class="icon_container">
+          <font size="18">
+            <i
+              id="settings-icon"
+              class="fa fa-history fa-4x"
+              style="margin-top: 10px"
+            ></i>
+          </font>
+        </div>
+        <section class="purchased-products-container"></section>
+      </div>
     </div>
-</body>
-<script src="../js/showfield.js"></script>
-
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+  <script src="../js/showfield.js"></script>
+  <script src="../js/jwtFrontEnd.js"></script>
+  <script src="../js/purchasedProduct.js"></script>
 </html>

@@ -325,3 +325,7 @@ ul li:hover {
 #add-balance-form {
   margin: 100px 30px 0;
 }
+.purchased-products-container {
+  overflow-y: auto;
+  max-height: 400px;
+}

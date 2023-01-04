@@ -1,7 +1,5 @@
 const cartContainer = document.querySelector(".cart-container");
 
-// window.addEventListener("DOMContentLoaded", start);
-
 async function start() {
   const cart = await JSON.parse(localStorage.getItem("cart"));
   const products = await fetchProducts(cart);
@@ -10,7 +8,6 @@ async function start() {
 }
 
 async function fetchProducts(cart) {
-  const arr = [1, 2, 3];
   let foundProducts = await Promise.all(
     cart.map(async (productID) => {
       try {
