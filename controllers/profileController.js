@@ -36,7 +36,7 @@ const addBalance = async (req, res) => {
     {
       new: true,
     }
-  );
+  ).select("-password");
   return res
     .status(StatusCodes.OK)
     .json({ msg: "Successfully replenished balance", user });

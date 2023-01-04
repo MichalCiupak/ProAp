@@ -115,7 +115,7 @@ ul li:hover {
   font-size: large;
   width: 60%;
   min-height: 70vh;
-  max-height: 800px;
+  /* max-height: 800px; */
   background-color: #fefed4;
   margin: 130px auto;
   display: grid;
@@ -304,4 +304,13 @@ ul li:hover {
   font-size: 30px;
   box-sizing: border-box;
   width: 30px;
+}
+#new-product-form {
+  max-width: 80%;
+  margin: auto;
+}
+#category-input {
+}
+.submit-new-product-btn {
+  margin-top: 20px;
 }

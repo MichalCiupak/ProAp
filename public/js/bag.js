@@ -35,7 +35,7 @@ function displayProducts(products, container) {
       <a href="/singleProduct/${product._id}">
         <h3 class="product-title">${product.name}</h3>
       </a>
-      <button class="remove-from-cart-btn" data-id=${product._id}>Remove from cart</button>
+      <button class="remove-from-cart-btn" data-id=${product._id}>Remove</ tton>
     </div>
   </article>`;
     })

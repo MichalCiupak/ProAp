@@ -141,7 +141,7 @@ const buyProduct = async (req, res) => {
       balance: user.balance - foundProduct.price,
     }
   );
-  let newUser = await User.findById(user._id);
+  let newUser = await User.findById(user._id).select("-password");
   console.log(newUser);
   return res
     .status(200)
