@@ -43,7 +43,7 @@ browserBtn.addEventListener("click", async () => {
     ? (products = await fetchProducts(
         `/api/products?available=true&name=${name}`
       ))
-    : (products = await fetchProducts(`/api/products?available=true&`));
+    : (products = await fetchProducts(`/api/products?available=true`));
   displayProducts(products);
   addToCartBtns();
 });
