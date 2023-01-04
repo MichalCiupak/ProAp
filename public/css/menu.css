@@ -314,3 +314,10 @@ ul li:hover {
 .submit-new-product-btn {
   margin-top: 20px;
 }
+.error-msg {
+  margin-top: 20px;
+}
+.sidebarmenu a,
+.sidebarmenu a:visited {
+  color: green;
+}

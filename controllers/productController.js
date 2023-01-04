@@ -9,6 +9,7 @@ const {
   ProductNotAvailable,
   NotFoundError,
   NotEnoughMoney,
+  BadRequestError,
 } = require("../errors");
 const cloudinary = require("cloudinary").v2;
 cloudinary.config({
@@ -87,8 +88,13 @@ const getSingleProduct = async (req, res) => {
 };
 
 const createProduct = async (req, res) => {
+  console.log("this is create product!!!!!");
+  console.log(req.body);
   if (typeof req.body?.price === "string") {
     req.body.price = Number(req.body.price);
+    if (req.body.price === 0) {
+      throw new BadRequestError("Please provide price for product!");
+    }
   }
   const productImageFile = req.files.productImage;
   if (!productImageFile.mimetype.startsWith("image")) {
