@@ -56,29 +56,37 @@ body {
   transition: all 3s ease;
 }
 .baritem {
-  color: green;
+  color: white;
   text-decoration: none;
-  /* font-weight: 500; */
+  font-weight: bold;
 }
 /* a{
     color:green;
 } */
 .baritem:hover {
-  font-weight: bold;
   color: white;
 }
 ul {
   margin-top: 0px;
   padding: 0px;
-  line-height: 320%;
+  /* line-height: 320%; */
   list-style-type: none;
   text-indent: 6%;
+  margin-bottom: 0px;
+
 }
 ul li {
   /* width:100%; */
-  padding-top: 0;
-  border: solid 1.2px;
+  display:block;
+  height:6.8vh;
+  padding-top: 12px;
+  border: solid 1.9px;
   border-color: #45a29e;
+
+}
+.homebox
+{
+  padding-top: 15px;
 }
 ul li:hover {
   background-color: rgb(2, 2, 45);
@@ -319,7 +327,7 @@ ul li:hover {
 }
 .sidebarmenu a,
 .sidebarmenu a:visited {
-  color: green;
+  color: white;
 }
 
 #add-balance-form {
