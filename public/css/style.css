@@ -2,10 +2,38 @@
   --transition: all 0.3s linear;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 9px 9px 31px -7px rgba(66, 68, 90, 1);
+  --theme-color: white;
+  --theme-font-color:#272727;
+  --theme-first-grad-color: rgba(128, 221, 255, 1);
+  --theme-second-grad-color: rgba(83, 174, 236, 1);
+  --theme-third-grad-color: rgba(125, 123, 236, 1);
+  --theme-fourth-grad-color: rgba(221, 6, 236, 1);
+  --theme-hover-color: #ebebeb;
+  --browser-color: rgb(236, 236, 236);
+  --footer-color:hsl(240, 51%, 64%);
+  --product-bckg-color:hsl(60, 95%, 91%);
+
+}
+
+.dark-ini{
+  --theme-color:rgb(59, 57, 57);
+  --theme-font-color: white;
+  --theme-first-grad-color: rgb(90, 151, 174);
+  --theme-second-grad-color: rgb(54, 112, 150);
+  --theme-third-grad-color: rgb(73, 72, 134);
+  --theme-fourth-grad-color: rgb(146, 3, 156);
+  --theme-hover-color: #464646;
+  --browser-color: rgb(122, 122, 122);
+  --footer-color: hsl(240, 28%, 45%);
+  --product-bckg-color: hsl(0, 0%, 84%);
+}
+
+::placeholder{
+  color: var(--theme-font-color);
 }
 
 body {
-  min-width: 700px;
+  min-width: 900px;
   background-color: #e4e4e4;
   color: rgb(63, 63, 63);
   font-family: "Lato", sans-serif;
@@ -31,12 +59,12 @@ header {
   width: 100%;
   height: 100px;
   text-align: center;
-  background: rgb(255, 255, 255);
+
   background: linear-gradient(
     5deg,
-    rgba(255, 255, 255, 1) 54%,
-    rgba(83, 174, 236, 1) 55%,
-    rgba(221, 6, 236, 1) 100%
+    var(--theme-color) 54%,
+    var(--theme-first-grad-color) 55%,
+    var(--theme-fourth-grad-color) 100%
   );
 }
 
@@ -44,10 +72,10 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  color: #272727;
+  color: var(--theme-font-color);
   font-size: 20px;
   text-align: center;
-  background: rgb(255, 255, 255);
+  background:var(--theme-color);
 }
 
 .category_type {
@@ -61,12 +89,12 @@ header {
 
 .category_type:hover {
   text-decoration: underline;
-  background-color: #ebebeb;
+  background-color: var(--theme-hover-color);
   cursor: pointer;
 }
 
 .navigation_bar {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--theme-color);
   width: 100%;
   padding: 5px 0;
   height: 45px;
@@ -93,6 +121,8 @@ header {
   border: 2px inset rgba(20, 55, 78, 0.18);
   outline: none;
   font-size: 20px;
+  color: var(--theme-font-color);
+  background-color: var(--browser-color);
 }
 
 .browser_button {
@@ -103,7 +133,7 @@ header {
   width: 35px;
   font-size: 25px;
   border: none;
-  background-color: #ffffff;
+  background-color: var(--theme-color);
 }
 
 .browser_button:hover {
@@ -184,31 +214,15 @@ header {
 }
 .settings_menu {
   display: inline-block;
-  margin-left: 20px;
-  font-size: 40px;
+  margin-left: 1%;
+  font-size: 20px;
   color: rgb(180, 180, 180);
-  width: 4%;
+  width: min-content;
   text-align: center;
 }
 
-#dark_theme {
-  background-color: #ff83e6;
-  margin-top: 4px;
-  width: 90px;
-  font-size: 20px;
-  color: aquamarine;
-  margin-left: -15px;
-  display: none;
-  text-align: left;
-  display: none;
-}
-
-.settings_menu:active > #dark_theme {
-  display: block;
-}
 
 .settings_menu:hover {
-  color: #41387a;
   cursor: pointer;
 }
 
@@ -231,22 +245,22 @@ header {
   min-height: 80vh;
   background: rgb(128, 221, 255);
   background: linear-gradient(162deg,
-      rgba(128, 221, 255, 1) 0%,
-      rgba(83, 174, 236, 1) 32%,
-      rgba(125, 123, 236, 1) 66%,
-      rgba(221, 6, 236, 1) 100%);
+      var(--theme-first-grad-color) 0%,
+      var(--theme-second-grad-color) 32%,
+      var(--theme-third-grad-color) 66%,
+      var(--theme-fourth-grad-color) 100%);
 }
 
 footer {
   text-align: center;
-  background: hsl(240, 51%, 64%);
+  background: var(--footer-color);
   padding-top: 40px;
   color: white;
   width: 100%;
   height: 70px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
   .login_button {
     width: 15%;
   }
@@ -283,7 +297,7 @@ footer {
 .product {
   box-shadow: var(--light-shadow);
   border-radius: 10px;
-  background: hsl(60, 95%, 91%);
+  background: var(--product-bckg-color);
   min-height: 400px;
   border: 2px hsl(60, 21%, 69%) solid;
   position: relative;
