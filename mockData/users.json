@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Denys",
+    "surname": "Foka",
+    "email": "denys@gmail.com",
+    "password": "Testpassword#1",
+    "address": "Nowowiejska 37B02-080 Warszawa"
+  },
+  {
+    "name": "test",
+    "surname": "user",
+    "email": "test-user@gmail.com",
+    "password": "Testpassword#2",
+    "address": "Nowowiejska 37B02-080 Warszawa"
+  }
+]

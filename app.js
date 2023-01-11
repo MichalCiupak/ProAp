@@ -53,12 +53,12 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set("trust proxy", 1);
-app.use(
-  rateLimit({
-    windowMs: 15 * 60 * 1000,
-    max: 100,
-  })
-);
+// app.use(
+//   rateLimit({
+//     windowMs: 15 * 60 * 1000,
+//     max: 100,
+//   })
+// );
 app.use("/", displayRouter);
 app.use(express.json());
 app.use(helmet());
