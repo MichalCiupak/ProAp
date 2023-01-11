@@ -26,3 +26,6 @@ Zadaniem jest implementacja sklepu internetowego z możliwościami: symulacji za
 git clone https://gitlab-stud.elka.pw.edu.pl/dfokashc/pap22z-z37.git && cd pap22z-z37 && sudo apt install nodejs && sudo apt install npm && npm i && node app.js
 
 ```
+
+## 5. Dostęp w sieci
+- Dana aplikacja jest dostępna na hostingu render (niestety w trakcie pisania projektu okazało się, że platforma heroku jest płatna dlatego skorzystaliśmy z platformy, która nazywa się render) za pomocą linku: https://hehe-shop.onrender.com/
