@@ -28,4 +28,4 @@ git clone https://gitlab-stud.elka.pw.edu.pl/dfokashc/pap22z-z37.git && cd pap22
 ```
 
 ## 5. Dostęp w sieci
-- Dana aplikacja jest dostępna na hostingu render (niestety w trakcie pisania projektu okazało się, że platforma heroku jest płatna dlatego skorzystaliśmy z platformy, która nazywa się render) za pomocą linku: https://hehe-shop.onrender.com/
+- Dana aplikacja jest dostępna na hostingu render (niestety w trakcie pisania projektu okazało się, że platforma heroku jest płatna dlatego skorzystaliśmy z platformy, która nazywa się render) za pomocą linku: https://heehee-shop.onrender.com/
