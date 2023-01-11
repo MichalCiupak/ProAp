@@ -12,9 +12,9 @@ categoryBtns.forEach((categoryBtn) => {
   categoryBtn.addEventListener("click", async function (e) {
     displayLoading();
     const category = this.dataset.category;
-    let url = `/api/products?`;
+    let url = `/api/products?available=true`;
     if (category !== "All") {
-      url += `category=${category}`;
+      url += `&category=${category}`;
     }
     const products = await fetchProducts(url);
     if (products.length === 0) {
