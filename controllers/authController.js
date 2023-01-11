@@ -27,7 +27,12 @@ const login = async (req, res) => {
 
 const register = async (req, res) => {
   console.log("reg");
-  const foundUser = await User.find({ email: req.body.email });
+  let foundUser = await User.findOne({ email: req.body.email });
+  console.log("foundUser:");
+  console.log(foundUser);
+  console.log("---------:");
+
+  foundUser = null;
   if (foundUser) {
     throw new BadRequestError("User with this email already exists!");
   }
