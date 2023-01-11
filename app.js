@@ -1,4 +1,12 @@
 require("dotenv").config();
+require("express-async-errors");
+
+// security packages
+const helmet = require("helmet");
+const cors = require("cors");
+const xss = require("xss-clean");
+const rateLimit = require("express-rate-limit");
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
@@ -6,7 +14,6 @@ const request = require("request");
 // const mongoose = require("mongoose");
 const encrypt = require("mongoose-encryption");
 const fileUpload = require("express-fileupload");
-require("express-async-errors");
 const cloudinary = require("cloudinary").v2;
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
@@ -44,8 +51,19 @@ const connectDB = require("./utils/connectDB");
 // used middlewares in app
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.set("trust proxy", 1);
+app.use(
+  rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+  })
+);
 app.use("/", displayRouter);
 app.use(express.json());
+app.use(helmet());
+app.use(cors());
+app.use(xss());
 app.use("/api/products", productRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/profile", authenticateUser, profileRouter);
