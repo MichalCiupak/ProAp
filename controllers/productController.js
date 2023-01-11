@@ -139,7 +139,10 @@ const buyProduct = async (req, res) => {
   if (!user.balance || user.balance < foundProduct.price) {
     throw new NotEnoughMoney("You have not enough money on your cash account!");
   }
-  await Product.findByIdAndUpdate(productID, { available: false });
+  const boughtProduct = await Product.findByIdAndUpdate(productID, {
+    available: false,
+  });
+  const seller = await User.findById(boughtProduct.createdBy);
   await User.updateOne(
     { _id: user._id },
     {
@@ -147,6 +150,8 @@ const buyProduct = async (req, res) => {
       balance: user.balance - foundProduct.price,
     }
   );
+  seller.balance += boughtProduct.price;
+  await seller.save();
   let newUser = await User.findById(user._id).select("-password");
   console.log(newUser);
   return res

@@ -15,7 +15,7 @@ window.addEventListener("load", async (e) => {
   console.log(UserData);
   namex.innerHTML = UserData.name;
   surname.innerHTML = UserData.surname;
-  address.innerHTML = UserData.address;
+  address.innerHTML = UserData.balance;
   email.innerHTML = UserData.email;
   login.innerHTML = UserData.login;
 });
