@@ -1,4 +1,5 @@
 const { StatusCodes } = require("http-status-codes");
+const { BadRequestError } = require("../errors");
 const User = require("../models/User");
 const { createJWT, isTokenValid } = require("../utils/jwt");
 const login = async (req, res) => {
@@ -26,6 +27,10 @@ const login = async (req, res) => {
 
 const register = async (req, res) => {
   console.log("reg");
+  const foundUser = await User.find({ email: req.body.email });
+  if (foundUser) {
+    throw new BadRequestError("User with this email already exists!");
+  }
   const newUser = await User.create(req.body);
 
   const token = createJWT({
