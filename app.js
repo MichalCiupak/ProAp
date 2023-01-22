@@ -39,12 +39,6 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set("trust proxy", 1);
-// app.use(
-//   rateLimit({
-//     windowMs: 15 * 60 * 1000,
-//     max: 100,
-//   })
-// );
 app.use("/", displayRouter);
 app.use(express.json());
 app.use(helmet());
@@ -55,10 +49,8 @@ app.use("/api/auth", authRouter);
 app.use("/api/profile", authenticateUser, profileRouter);
 app.use("/api/confirmation", emailRouter);
 
-
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
-
 
 // start server
 const port = process.env.PORT || 2000;

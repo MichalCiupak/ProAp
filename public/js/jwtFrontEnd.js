@@ -18,10 +18,8 @@ async function checkToken() {
       console.log(error);
       hasValidToken = false;
       currentUser = null;
-      // localStorage.clear();
       return false;
     }
-    console.log("sdfgdsfg");
     return true;
   }
 }

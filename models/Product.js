@@ -1,5 +1,3 @@
-// TODO
-// ADD NotfoundUserError
 const mongoose = require("mongoose");
 const User = require("../models/User");
 const productSchema = mongoose.Schema({
@@ -9,7 +7,6 @@ const productSchema = mongoose.Schema({
   },
   description: {
     type: String,
-    // default: "{VALUE.name}"
     default: "lack of description",
   },
   img: {
@@ -45,10 +42,7 @@ const productSchema = mongoose.Schema({
   },
 });
 productSchema.pre("save", async function () {
-  console.log(`From pre save ${this.createdBy}`);
-
   const ownerUser = await User.findById(this.createdBy);
-  // TODO: NEW ERROR
   if (!ownerUser) {
     throw new Error("User with provided ID was not found");
   }

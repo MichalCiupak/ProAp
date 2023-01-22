@@ -1,41 +1,35 @@
 [
   {
-    // Denys
     "name": "laptop",
     "price": 1000,
     "category": "Electronics And Computers",
     "description": "The best laptop in the world!"
   },
   {
-    // Denys
     "name": "just a book",
     "price": 19,
     "category": "Books",
     "description": "Just a thing with a couple of pages smeared with ink so that you can find sense in the spots called words (By Denys)"
   },
   {
-    // Denys
     "name": "stuff for DJ things",
     "price": 200,
     "category": "Electronics And Computers",
     "description": "Make your party unforgettable!!"
   },
   {
-    // Test
     "name": "Teddy",
     "price": 10,
     "category": "Toys",
     "description": "if you do not know what to present to your soulmate, then buy this!"
   },
   {
-    // Test
     "name": "fahrenheit 451",
     "price": 9,
     "category": "Books",
     "description": "Fahrenheit 451 is a 1953 dystopian novel by American writer Ray Bradbury. Often regarded as one of his best works, Fahrenheit 451 presents an American society where books have been personified and outlawed and 'firemen' burn any that are found. The novel follows Guy Montag, a fireman who becomes disillusioned with his role of censoring literature and destroying knowledge, eventually quitting his job and committing himself to the preservation of literary and cultural writings."
   },
   {
-    // John
     "name": "computer",
     "price": 1200,
     "category": "Electronics And Computers",

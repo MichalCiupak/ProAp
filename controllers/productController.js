@@ -1,5 +1,3 @@
-// TODO
-// 1. specific errors for file
 const { StatusCodes } = require("http-status-codes");
 const path = require("path");
 const Product = require("../models/Product");
@@ -34,7 +32,6 @@ const getAllProducts = async (req, res) => {
       products: [],
     });
   }
-  console.log(req.query);
   if (name) {
     req.query.name = { $regex: name, $options: "i" };
   }
@@ -51,11 +48,8 @@ const getAllProducts = async (req, res) => {
       regEx,
       (match) => `-${operatorMap[match]}-`
     );
-    console.log(`numericFilters: ${numericFilters}`);
-    console.log(`filters: ${filters}`);
     filters = filters.split("-");
     const [price, operator, value] = filters;
-    console.log(filters);
     if (price == "price") {
       req.query.price = { [operator]: Number(value) };
     }
@@ -88,8 +82,6 @@ const getSingleProduct = async (req, res) => {
 };
 
 const createProduct = async (req, res) => {
-  console.log("this is create product!!!!!");
-  console.log(req.body);
   if (typeof req.body?.price === "string") {
     req.body.price = Number(req.body.price);
     if (req.body.price === 0) {
@@ -130,7 +122,6 @@ const buyProduct = async (req, res) => {
   try {
     foundProduct = await Product.findById(productID);
   } catch (error) {
-    console.log(typeof error);
     throw new NotFoundError(`Cannot find product with id: ${productID}`);
   }
   if (!foundProduct.available) {
@@ -153,7 +144,6 @@ const buyProduct = async (req, res) => {
   seller.balance += boughtProduct.price;
   await seller.save();
   let newUser = await User.findById(user._id).select("-password");
-  console.log(newUser);
   return res
     .status(200)
     .json({ msg: "OK", product: foundProduct, user: newUser });

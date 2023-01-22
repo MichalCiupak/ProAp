@@ -28,7 +28,6 @@ categoryBtns.forEach((categoryBtn) => {
           if (hasValidToken && currentUser) {
             addProductToLocalStorage(this.dataset.id);
           } else {
-            console.log(1);
             window.location.href = "/login";
           }
         });
@@ -38,7 +37,6 @@ categoryBtns.forEach((categoryBtn) => {
 });
 browserBtn.addEventListener("click", async () => {
   const name = browserInput.value;
-  console.log(name);
   name
     ? (products = await fetchProducts(
         `/api/products?available=true&name=${name}`
@@ -88,7 +86,6 @@ async function displayProducts(products) {
 async function start() {
   await checkToken();
   if (hasValidToken && currentUser) {
-    console.log(currentUser);
     loginBtn.innerHTML = `          <p class="message_for_logged">
     Hello,<a href="/HTML/settings.html">
       <span style="padding-right: 15px">${currentUser.name}</span></a
@@ -107,18 +104,6 @@ async function start() {
   const products = await fetchProducts();
   displayProducts(products);
   addToCartBtns();
-  // const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
-  // addToCartBtns.forEach(async (addToCartBtn) => {
-  //   addToCartBtn.addEventListener("click", async function () {
-  //     checkToken();
-  //     if (hasValidToken && currentUser) {
-  //       addProductToLocalStorage(this.dataset.id);
-  //     } else {
-  //       console.log(1);
-  //       window.location.href = "/login";
-  //     }
-  //   });
-  // });
 }
 
 function addToCartBtns() {
@@ -129,7 +114,6 @@ function addToCartBtns() {
       if (hasValidToken && currentUser) {
         addProductToLocalStorage(this.dataset.id);
       } else {
-        console.log(1);
         window.location.href = "/login";
       }
     });

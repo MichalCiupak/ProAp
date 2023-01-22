@@ -3,20 +3,19 @@
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 9px 9px 31px -7px rgba(66, 68, 90, 1);
   --theme-color: white;
-  --theme-font-color:#272727;
+  --theme-font-color: #272727;
   --theme-first-grad-color: rgba(128, 221, 255, 1);
   --theme-second-grad-color: rgba(83, 174, 236, 1);
   --theme-third-grad-color: rgba(125, 123, 236, 1);
   --theme-fourth-grad-color: rgba(221, 6, 236, 1);
   --theme-hover-color: #ebebeb;
   --browser-color: rgb(236, 236, 236);
-  --footer-color:hsl(240, 51%, 64%);
-  --product-bckg-color:hsl(60, 95%, 91%);
-
+  --footer-color: hsl(240, 51%, 64%);
+  --product-bckg-color: hsl(60, 95%, 91%);
 }
 
-.dark-ini{
-  --theme-color:rgb(59, 57, 57);
+.dark-ini {
+  --theme-color: rgb(59, 57, 57);
   --theme-font-color: white;
   --theme-first-grad-color: rgb(90, 151, 174);
   --theme-second-grad-color: rgb(54, 112, 150);
@@ -28,7 +27,7 @@
   --product-bckg-color: hsl(0, 0%, 84%);
 }
 
-::placeholder{
+::placeholder {
   color: var(--theme-font-color);
 }
 
@@ -75,7 +74,7 @@ header {
   color: var(--theme-font-color);
   font-size: 20px;
   text-align: center;
-  background:var(--theme-color);
+  background: var(--theme-color);
 }
 
 .category_type {
@@ -221,7 +220,6 @@ header {
   text-align: center;
 }
 
-
 .settings_menu:hover {
   cursor: pointer;
 }
@@ -244,11 +242,13 @@ header {
 .main-container {
   min-height: 80vh;
   background: rgb(128, 221, 255);
-  background: linear-gradient(162deg,
-      var(--theme-first-grad-color) 0%,
-      var(--theme-second-grad-color) 32%,
-      var(--theme-third-grad-color) 66%,
-      var(--theme-fourth-grad-color) 100%);
+  background: linear-gradient(
+    162deg,
+    var(--theme-first-grad-color) 0%,
+    var(--theme-second-grad-color) 32%,
+    var(--theme-third-grad-color) 66%,
+    var(--theme-fourth-grad-color) 100%
+  );
 }
 
 footer {
@@ -373,8 +373,6 @@ footer {
 .add-to-cart-btn:hover {
   cursor: pointer;
   box-shadow: var(--dark-shadow);
-
-  /* scale: 1.01; */
 }
 .loading-gif-container p {
   margin: 0;

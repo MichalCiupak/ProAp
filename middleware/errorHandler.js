@@ -3,7 +3,6 @@ const { GeneralAPIError } = require("../errors");
 const errorHandlerMiddleware = (err, req, res, next) => {
   console.log(err);
   if (err.name == "ValidationError") {
-    console.log("0000000000000000000000000000000");
     return res.status(StatusCodes.BAD_REQUEST).json({ msg: err.message });
   }
 

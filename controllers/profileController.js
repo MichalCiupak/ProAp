@@ -6,7 +6,6 @@ const getProfileData = async (req, res) => {
     return res.status(StatusCodes.UNAUTHORIZED).json({ msg: "Unauthorized" });
   }
   const user = await User.findById(req.user.userID);
-  console.log(user);
   res.status(StatusCodes.OK).json({
     userID: user._id,
     name: user.name,

@@ -8,13 +8,9 @@ const {
   buyProduct,
 
   updateProduct,
-  // displaySingleProductPage,
-  // displayMainPage,
 } = require("../controllers/productController");
 const router = express.Router();
 
-// router.route("/:productID").get(displaySingleProductPage);
-// router.route("/").get(displayMainPage);
 router
   .route("/")
   .get(getAllProducts)

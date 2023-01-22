@@ -4,8 +4,6 @@ const User = require("../models/User");
 const { createJWT, isTokenValid } = require("../utils/jwt");
 const login = async (req, res) => {
   const userFound = await User.findOne({ email: req.body.email });
-  // console.log(userFound);
-  // console.log("----------");
   if (!userFound || userFound.password != req.body.password) {
     return res
       .status(StatusCodes.BAD_REQUEST)
@@ -19,18 +17,12 @@ const login = async (req, res) => {
     address: userFound.address,
     balance: userFound.balance,
   });
-  console.log(token);
-  console.log("-----");
-  console.log(isTokenValid(token));
   res.status(StatusCodes.OK).json({ msg: "OK", token });
 };
 
 const register = async (req, res) => {
   console.log("reg");
   let foundUser = await User.findOne({ email: req.body.email });
-  console.log("foundUser:");
-  console.log(foundUser);
-  console.log("---------:");
 
   foundUser = null;
   if (foundUser) {

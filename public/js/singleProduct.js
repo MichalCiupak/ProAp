@@ -1,9 +1,6 @@
 const { host, hostname, href, origin, pathname, port, protocol, search } =
   window.location;
 const productID = pathname.slice("/singleProduct/".length);
-// console.log(pathname);
-// console.log(productID);
-// console.log(pathname.indexOf("/singleProduct/"));
 const loadingText = document.querySelector(".loading-text");
 const errorText = document.querySelector(".error-text");
 const productWrapper = document.querySelector(".product-wrapper");
@@ -17,7 +14,6 @@ async function start() {
   try {
     const data = await axios.get(`/api/products/${productID}`);
     const product = data.data.product;
-    console.log(product);
     productWrapper.innerHTML = `<article class="single-product-img-container">
     <img
       class="single-product-img"
@@ -44,7 +40,6 @@ async function start() {
       if (hasValidToken && currentUser) {
         addProductToLocalStorage(this.dataset.id);
       } else {
-        console.log(1);
         window.location.href = "/login";
       }
     });
@@ -77,7 +72,6 @@ async function checkToken() {
         localStorage.setItem("cart", "[]");
       }
     } catch (error) {
-      console.log(error);
       hasValidToken = false;
       currentUser = null;
       localStorage.clear();

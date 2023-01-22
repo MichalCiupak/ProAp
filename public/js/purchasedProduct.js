@@ -5,7 +5,6 @@ const purchasedProductsContainer = document.querySelector(
 async function start() {
   const boughtProducts = await fetchBoughtProducts();
   displayProducts(boughtProducts, purchasedProductsContainer);
-  console.log(boughtProducts);
 }
 
 async function fetchBoughtProducts() {
@@ -13,14 +12,12 @@ async function fetchBoughtProducts() {
   if (!userLoggedIn) {
     return;
   }
-  console.log(1);
   try {
     const resp = await axios.get("/api/profile", {
       headers: {
         authorization: localStorage.getItem("token"),
       },
     });
-    console.log(resp);
     const boughtProducts = resp.data.boughtProducts;
     let foundProducts = await Promise.all(
       boughtProducts.map(async (productID) => {
@@ -34,9 +31,7 @@ async function fetchBoughtProducts() {
     return foundProducts.filter((product) => {
       return product;
     });
-  } catch (error) {
-    console.log("errrrr");
-  }
+  } catch (error) {}
 }
 
 function displayProducts(products, container) {

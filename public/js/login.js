@@ -9,7 +9,6 @@ loginForm.addEventListener("submit", async function (e) {
     displayError("Please fill all fields!");
     return;
   }
-  console.log(1);
   try {
     const resp = await axios.post("/api/auth/login", {
       email: emailInput.value,
@@ -21,10 +20,7 @@ loginForm.addEventListener("submit", async function (e) {
     window.location.href = "/";
   } catch (error) {
     console.log(error);
-    console.log(1);
     displayError("User with provided credentials does not exist");
-
-    // console.log(resp);
   }
 });
 
